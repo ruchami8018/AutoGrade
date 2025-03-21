@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EGP+/TM+0Gg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\AutoGrade\\AutoGradeServer\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": []
+}
