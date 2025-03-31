@@ -14,5 +14,7 @@ namespace core.IServices
         Task<bool> IsEmailExistAsync(string email);
         Task<User> GetUserByEmailAsync(string email);
         Task AddUserAsync(User user);
+        Task UpdateUserAsync(string email, string password, string school, string name);
+
     }
 }

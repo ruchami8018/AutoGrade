@@ -14,17 +14,14 @@ const Update = ({ onClose }: { onClose: () => void }) => {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         try {
-            const res = await axios.put('http://localhost:5082/api/users', {//לבדוק את ה URL
-                mail: currentUser.mail,
-                name: nameRef.current?.value || currentUser.name,
+            const res = await axios.put('https://localhost:7158/api/Users/update', {//לבדוק את ה URL
+                email: currentUser.mail,
                 password: passwordRef.current?.value || currentUser.password,
-                school: schoolRef.current?.value || currentUser.school
-
+                school: schoolRef.current?.value || currentUser.school,
+                name: nameRef.current?.value || currentUser.name
             }, {
-                // headers: {
-                //     'user-id': currentUser?.id
-                // }
             });
+            localStorage.setItem("token", res.data.token);
             userDispatch({
                 type: 'UPDATE',
                 new_data: {
@@ -36,7 +33,7 @@ const Update = ({ onClose }: { onClose: () => void }) => {
                     exams: currentUser.exams, // This line was missing a comma in your original code
                 }
             });
-            alert("העדכון בוצע בהצלחה");
+            // alert("העדכון בוצע בהצלחה");
             onClose();
         } catch (e: any) {
             console.error('Error updating user:', e);

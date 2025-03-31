@@ -118,6 +118,19 @@ namespace api.Controllers
             return Ok(new { Token = token, User = userDto });
 
         }
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateUserAsync([FromBody] UpdateUserModel model)
+        {
+            await _userService.UpdateUserAsync(model.Email, model.Password, model.School, model.Name);
+            return Ok();
+        }
+        public class UpdateUserModel
+        {
+            public string Email { get; set; }
+            public string? Password { get; set; }
+            public string? School { get; set; }
+            public string? Name { get; set; }
+        }
 
         //private async Task SendWelcomeEmail(string email, string name)
         //{

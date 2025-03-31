@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mJ5332TcT2Y=",
+  "dgSpecHash": "tcV0OsoGP5U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\practicumProject\\server\\data\\data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\AutoGrade\\server\\data\\data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

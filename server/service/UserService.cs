@@ -45,12 +45,12 @@ namespace service
     {
         private readonly IConfiguration _configuration;
         private readonly IUserRepository _userRepository;
-        private readonly DataContext _context;
+        //private readonly DataContext _context;
 
         //private readonly IManagerRepository _managerRepository;
-        public UserService(DataContext context, IConfiguration configuration, IUserRepository userRepository)
+        public UserService( IConfiguration configuration, IUserRepository userRepository)
         {
-            _context = context;
+            //_context = context;
             _configuration = configuration;
             _userRepository = userRepository;
             //_managerRepository = managerRepository;
@@ -147,9 +147,32 @@ namespace service
         public async Task AddUserAsync(User user)
         {
             await _userRepository.AddUserAsync(user);
-            await _context.SaveChangesAsync();
 
             //await _managerRepository.SaveAsync();
+        }
+        public async Task UpdateUserAsync(string email, string? password, string? school, string? name)
+        {
+            var user = await _userRepository.GetUserByEmailAsync(email);
+
+            if (user == null)
+            {
+                throw new HttpRequestException("User not found");
+            }
+
+            if (password != null)
+            {
+                user.Password = password;
+            }
+            if (school != null)
+            {
+                user.School = school;
+            }
+            if (name != null)
+            {
+                user.Name = name;
+            }
+
+            await _userRepository.UpdateUserAsync(user);
         }
 
         //public async Task<User> LoginAsync(string email, string password)

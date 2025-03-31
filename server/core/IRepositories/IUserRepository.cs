@@ -12,5 +12,7 @@ namespace core.IRepositories
         Task<bool> IsEmailExistAsync(string email);
         Task<User> GetUserByEmailAsync(string email);
         Task AddUserAsync(User user);
+        Task UpdateUserAsync(User user);
+
     }
 }
