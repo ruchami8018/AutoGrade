@@ -14,7 +14,7 @@ const Update = ({ onClose }: { onClose: () => void }) => {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         try {
-            const res = await axios.put('http://localhost:/api/auth', {//לבדוק את ה URL
+            const res = await axios.put('http://localhost:5082/api/users', {//לבדוק את ה URL
                 mail: currentUser.mail,
                 name: nameRef.current?.value || currentUser.name,
                 password: passwordRef.current?.value || currentUser.password,

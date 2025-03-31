@@ -4,6 +4,8 @@ import axios from 'axios';
 import { FormEvent, useContext, useRef } from 'react';
 import { UserContext } from '../../store/UserStore';
 import CommonModal from '../design/CommonModal';
+import { List } from 'immutable';
+import { Exam } from '../../models/Exam';
 
 const LogUp = ({ onClose }: { onClose: () => void }) => {
 
@@ -17,11 +19,27 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post('', {//להוסיף את ה APIENDPOINT
-        mail: mailRef.current?.value,
-        password: passwordREf.current?.value
+      const res = await axios.post('https://localhost:7158/api/Users/register', {//להוסיף את ה APIENDPOINT
+        email: mailRef.current?.value,
+        password: passwordREf.current?.value,
+        name: nameRef.current?.value,
+        school: schoolRef.current?.value,
+        role:'user'
       });
-      if (res.data.userId) {
+
+      // try {
+      //   // const response = await register(name, email, password, "User");
+      //   const { token, user } = res;
+      //   // console.log('tttt' + token);
+      //   // console.log('uuuu', user);
+      //   localStorage.setItem("token", token);
+
+      //   userDispatch({
+      //       type: "REGISTER",
+      //       data: user,
+      //   });
+
+        localStorage.setItem("token", res.data.token);
         userDispatch({
           type: 'CREATE',
           new_data: {
@@ -29,22 +47,22 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
             password: passwordREf.current?.value || '',
             mail: mailRef.current?.value || '',
             school: schoolRef.current?.value || '',
-            exams: [],
-            roles: [],
+            exams: List <Exam>([]),
+            roles:'user',
             isLoggedIn: true
           }
         });
-        alert("ההרשמה הצליחה");
+        // alert("ההרשמה הצליחה");
         onClose();
-      } else {
-        alert("שגיאה בהרשמה");
-      }
+      // } catch (error) {
     } catch (e: any) {
       if (e.response && e.response.status === 400) {
         alert(e.response.data.message || "המשתמש כבר קיים");
       } else {
         alert("ההרשמה לא הצליחה");
       }
+      onClose();
+      console.error(e);
     }
   }
   return (

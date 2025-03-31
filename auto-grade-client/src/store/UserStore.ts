@@ -68,17 +68,17 @@
 
 import { createContext } from "react"
 import { User } from "../models/User"
-import { Role } from "../models/User"
 import { Exam } from "../models/Exam"
 import { Action } from "../models/Action";
+import { List } from "immutable";
 
 export const initialState: User = {
     name: '',
     password: '',
     mail: '',
     school: '',
-    roles: [] as Role[], 
-    exams: [] as Exam[], 
+    roles: '', 
+    exams: List<Exam>(), 
     isLoggedIn: false
 };
 export const UserContext=createContext<{
