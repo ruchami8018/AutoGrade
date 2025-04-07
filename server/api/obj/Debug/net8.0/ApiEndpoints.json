@@ -1,15 +1,21 @@
 [
   {
     "ContainingType": "api.Controllers.ExamController",
-    "Method": "Get",
+    "Method": "Post",
     "RelativePath": "api/Exam",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "examPost",
+        "Type": "api.Models.ExamPost",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -21,22 +27,26 @@
   },
   {
     "ContainingType": "api.Controllers.ExamController",
-    "Method": "Post",
-    "RelativePath": "api/Exam",
-    "HttpMethod": "POST",
+    "Method": "GetExamUploadsByExamId",
+    "RelativePath": "api/Exam/{examId}/uploads",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "examId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.Collections.Generic.List\u00601[[core.DTOs.ExamUploadDto, core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
@@ -57,7 +67,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "core.DTOs.ExamDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -69,7 +79,7 @@
   },
   {
     "ContainingType": "api.Controllers.ExamController",
-    "Method": "Put",
+    "Method": "UpdateExam",
     "RelativePath": "api/Exam/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -81,15 +91,19 @@
         "IsRequired": true
       },
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "examUpdate",
+        "Type": "core.DTOs.ExamDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
@@ -110,23 +124,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
   },
   {
-    "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "Get",
-    "RelativePath": "api/ExamUpload",
+    "ContainingType": "api.Controllers.ExamController",
+    "Method": "GetExamsByUserId",
+    "RelativePath": "api/Exam/user/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Collections.Generic.List\u00601[[core.DTOs.ExamDto, core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -138,100 +162,35 @@
   },
   {
     "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "Post",
-    "RelativePath": "api/ExamUpload",
+    "Method": "GetPresignedUrl",
+    "RelativePath": "api/ExamUpload/presigned-url",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.ExamUploadController",
+    "Method": "UploadExamUrl",
+    "RelativePath": "api/ExamUpload/upload-url",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "core.DTOs.ExamUploadDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "Get",
-    "RelativePath": "api/ExamUpload/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "Put",
-    "RelativePath": "api/ExamUpload/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "Delete",
-    "RelativePath": "api/ExamUpload/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "api.Controllers.UsersController",

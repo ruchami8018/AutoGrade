@@ -1,5 +1,6 @@
 ﻿using core.IRepositories;
 using core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,29 @@ using System.Threading.Tasks;
 namespace data.Repositories
 {
     public class ExamUploadRepository : IExamUploadRepository
-    {//עדיין לא מומש!!!!!!!!!!!!!!!!!!!!!!!
-        public Task<bool> AddExamUploadAsync(ExamUpload examUpload)
+    {//
+        private readonly DataContext _context;
+        public ExamUploadRepository(DataContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<List<ExamUpload>> GetAllByIdAsync(int id)
+        public async Task<bool> AddExamUploadAsync(ExamUpload examUpload)
         {
-            throw new NotImplementedException();
+            _context.ExamsUploads.Add(examUpload);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<ExamUpload> GetExamUploadAsync(int id, int exam_id)
+        public async Task<List<ExamUpload>> GetAllByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.ExamsUploads.Where(e => e.Id == id).ToListAsync();
+        }
+
+        public async Task<ExamUpload> GetExamUploadAsync(int id, int exam_id)
+        {
+            return await _context.ExamsUploads.FirstOrDefaultAsync(e => e.Id == id && e.ExamId == exam_id)
+                                ?? throw new Exception("ExamUpload not found"); ;
         }
     }
 }

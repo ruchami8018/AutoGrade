@@ -1,6 +1,6 @@
-import { User } from './User';
+import { User } from "./User";
 
-export type Action={
-    type:'CREATE'|'UPDATE'|'GET'|'REMOVE',
-    new_data:User
+export type Action = {
+    type: 'CREATE' | 'UPDATE' | 'LOGOUT';
+    new_data?: Partial<User>;
 }

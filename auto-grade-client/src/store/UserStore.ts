@@ -73,11 +73,12 @@ import { Action } from "../models/Action";
 import { List } from "immutable";
 
 export const initialState: User = {
+    id: 0,
     name: '',
     password: '',
-    mail: '',
+    email: '',
     school: '',
-    roles: '', 
+    role: '', 
     exams: List<Exam>(), 
     isLoggedIn: false
 };
@@ -99,6 +100,8 @@ export const userReducer=(current = initialState,action:Action): User =>{
                 ...current, 
                 ...action.new_data
             }
+        case 'LOGOUT':
+            return initialState;
         default:
             return current
 

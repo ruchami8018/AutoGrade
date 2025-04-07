@@ -13,7 +13,7 @@ namespace core.Models
         public string Subject { get; set; }
         public string Title { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        //public string Class { get; set; } למחוק!!
+        public string Class { get; set; } 
         public List<Question> Questions { get; set; }
         //public List<Answer> Answers { get; set; } למחוק!!
         public string ExampleExamPath { get; set; }
@@ -23,16 +23,15 @@ namespace core.Models
         {
 
         }
-        public Exam(int id, int userId, string subject, string title, DateTime created_at,List<Question> questions, List<ExamUpload> examsUpload)
+        public Exam(int id, int userId, string subject, string title, DateTime created_at,List<Question> questions, List<ExamUpload> examsUpload,string @class)
         {
             Id = id;
             UserId = userId;
             Subject = subject;
             Title = title;
             CreatedAt = created_at;
-            //Class = @class;
+            Class = @class;
             Questions = questions;
-            //Answers = answers;
         }
 
     }

@@ -98,7 +98,7 @@ namespace api.Controllers
             await _userService.AddUserAsync(newUser);
 
             var token = _userService.GenerateJwtToken(newUser);
-            return Ok(new { Token = token, User = new { newUser.Id, newUser.Name, newUser.Email, newUser.Password, newUser.Role, newUser.School } }); // הוספנו את School לתגובה
+            return Ok(new { Token = token, User = new { newUser.Id, newUser.Name, newUser.Email, newUser.Password, newUser.Role } });
         }
 
         [HttpPost("login")]

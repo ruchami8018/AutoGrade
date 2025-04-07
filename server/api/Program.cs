@@ -1,11 +1,24 @@
 using api.Extensions;
 using core.IRepositories;
+using core.Models;
 using data;
 using data.Repositories;
 using Microsoft.OpenApi.Models;
 using service;  
 
 var builder = WebApplication.CreateBuilder(args);
+
+DotNetEnv.Env.Load();
+var accessKey = Environment.GetEnvironmentVariable("AWS_ACCESS_KEY_ID");
+var secretKey = Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY");
+var region = Environment.GetEnvironmentVariable("AWS_REGION");
+var bucket = Environment.GetEnvironmentVariable("AWS_BUCKET_NAME");
+
+builder.Services.AddSingleton(new S3Settings
+{
+    BucketName = bucket,
+    Region = region
+});
 
 // Add services to the container.
 //הוספה על פי השעור-התממשקות ל DB
@@ -15,7 +28,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAnyOrigin",
         builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
+              
 });
 
 // הוספת Controllers

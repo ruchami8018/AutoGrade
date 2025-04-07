@@ -15,7 +15,7 @@ const Update = ({ onClose }: { onClose: () => void }) => {
         e.preventDefault();
         try {
             const res = await axios.put('https://localhost:7158/api/Users/update', {//לבדוק את ה URL
-                email: currentUser.mail,
+                email: currentUser.email,
                 password: passwordRef.current?.value || currentUser.password,
                 school: schoolRef.current?.value || currentUser.school,
                 name: nameRef.current?.value || currentUser.name
@@ -27,9 +27,9 @@ const Update = ({ onClose }: { onClose: () => void }) => {
                 new_data: {
                     name: nameRef.current?.value || currentUser.name,
                     password: passwordRef.current?.value || currentUser.password,
-                    mail: currentUser.mail,
+                    email: currentUser.email,
                     school: schoolRef.current?.value || currentUser.school,
-                    roles: currentUser.roles,
+                    role: currentUser.role,
                     exams: currentUser.exams, // This line was missing a comma in your original code
                 }
             });
@@ -38,6 +38,8 @@ const Update = ({ onClose }: { onClose: () => void }) => {
         } catch (e: any) {
             console.error('Error updating user:', e);
             alert("העדכון נכשל");
+            onClose();
+
         }
     }
     return (

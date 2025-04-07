@@ -8,5 +8,6 @@ namespace core.DTOs
 {
     public class QuestionDto
     {
+        public string Text { get; set; }
     }
 }

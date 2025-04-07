@@ -1,4 +1,5 @@
-﻿using core.IServices;
+﻿using core.IRepositories;
+using core.IServices;
 using core.Models;
 using System;
 using System.Collections.Generic;
@@ -9,20 +10,26 @@ using System.Threading.Tasks;
 namespace service
 {
     public class ExamUploadService : IExamUploadService
-    {///לא מומש עדיין----------------------
-        public Task<bool> AddExamUploadAsync(ExamUpload examUpload)
+    {//
+        private readonly IExamUploadRepository _examUploadRepository;
+        public ExamUploadService(IExamUploadRepository examUploadRepository)
         {
-            throw new NotImplementedException();
+            _examUploadRepository = examUploadRepository;
         }
 
-        public Task<List<ExamUpload>> GetAllByIdAsync(int id)
+        public async Task<bool> AddExamUploadAsync(ExamUpload examUpload)
         {
-            throw new NotImplementedException();
+            return await _examUploadRepository.AddExamUploadAsync(examUpload);
         }
 
-        public Task<ExamUpload> GetExamUploadAsync(int id, int exam_id)
+        public async Task<List<ExamUpload>> GetAllByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _examUploadRepository.GetAllByIdAsync(id);
+        }
+
+        public async Task<ExamUpload> GetExamUploadAsync(int id, int exam_id)
+        {
+            return await _examUploadRepository.GetExamUploadAsync(id, exam_id);
         }
     }
 }

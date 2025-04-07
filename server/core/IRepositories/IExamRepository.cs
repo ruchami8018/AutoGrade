@@ -1,4 +1,5 @@
-﻿using System;
+﻿using core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace core.IRepositories
 {
     public interface IExamRepository
     {
+        Task<Exam> GetByIdAsync(int id);
+        Task<bool> AddExamAsync(Exam newexam);
+        Task<List<Exam>> GetExamsByUserIdAsync(int userId);
+        Task<bool> UpdateExamAsync(Exam exam);
+        Task<bool> DeleteExamAsync(int id);
     }
 }

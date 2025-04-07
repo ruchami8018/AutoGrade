@@ -1,0 +1,45 @@
+# Ignore environment files
+# *.env
+# *.env.*
+# env.env
+/server/api/env.env
+server/api/env.env
+
+
+
+# Ignore build artifacts
+# bin/
+# obj/
+# .vs/
+
+# Ignore user-specific files
+# *.user
+# *.suo
+
+# Ignore logs
+# *.log
+
+# Ignore compiled DLLs and EXEs
+# *.dll
+# *.exe
+# *.pdb
+
+# Ignore folders from dotnet
+# server/api/bin/
+# server/api/obj/
+# server/core/bin/
+# server/core/obj/
+# server/data/bin/
+# server/data/obj/
+# server/service/bin/
+# server/service/obj/
+
+# Ignore node_modules in the client
+# auto-grade-client/node_modules/
+
+# Ignore AWS credentials if exist
+*.aws
+*.aws.*
+
+# Optional: ignore Visual Studio Code settings
+# .vscode/

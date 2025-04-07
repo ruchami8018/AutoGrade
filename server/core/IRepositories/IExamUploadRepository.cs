@@ -14,5 +14,6 @@ namespace core.IRepositories
         Task<List<ExamUpload>> GetAllByIdAsync(int id);
 
         Task<bool> AddExamUploadAsync(ExamUpload examUpload);
+
     }
 }

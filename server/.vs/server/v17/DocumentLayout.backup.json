@@ -7,80 +7,51 @@
       "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\imanagerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\imanagerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\examuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\examuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\managerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\managerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\iexamuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\iservices\\iexamuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\models\\exampost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\models\\exampost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\examupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\examupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iexamuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iexamuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\examrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\examrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,188 +61,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "core\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\MappingProfile.cs",
-              "RelativeToolTip": "core\\MappingProfile.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:18:27.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Manager.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Manager.cs",
-              "RelativeDocumentMoniker": "core\\Models\\Manager.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Manager.cs",
-              "RelativeToolTip": "core\\Models\\Manager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:18:20.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ManagerDto.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ManagerDto.cs",
-              "RelativeDocumentMoniker": "core\\DTOs\\ManagerDto.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ManagerDto.cs",
-              "RelativeToolTip": "core\\DTOs\\ManagerDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:18:01.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "core\\DTOs\\UserDto.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "core\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T13:44:59.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
-              "RelativeDocumentMoniker": "core\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
-              "RelativeToolTip": "core\\Models\\User.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAIwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T13:44:44.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ExamUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
-              "RelativeDocumentMoniker": "data\\Repositories\\ExamUploadRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
-              "RelativeToolTip": "data\\Repositories\\ExamUploadRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:34:47.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ExamUploadService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
-              "RelativeDocumentMoniker": "service\\ExamUploadService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
-              "RelativeToolTip": "service\\ExamUploadService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:32:14.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExamUploadController.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
-              "RelativeDocumentMoniker": "api\\Controllers\\ExamUploadController.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
-              "RelativeToolTip": "api\\Controllers\\ExamUploadController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:31:06.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IExamUploadService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
-              "RelativeDocumentMoniker": "core\\IServices\\IExamUploadService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
-              "RelativeToolTip": "core\\IServices\\IExamUploadService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:29:04.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IExamUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamUploadRepository.cs",
-              "RelativeDocumentMoniker": "core\\IRepositories\\IExamUploadRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamUploadRepository.cs",
-              "RelativeToolTip": "core\\IRepositories\\IExamUploadRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:26:15.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
-              "RelativeDocumentMoniker": "data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
-              "RelativeToolTip": "data\\DataContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:15:43.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ManagerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ManagerRepository.cs",
-              "RelativeDocumentMoniker": "data\\Repositories\\ManagerRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ManagerRepository.cs",
-              "RelativeToolTip": "data\\Repositories\\ManagerRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:05:05Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IUserService.cs",
-              "RelativeDocumentMoniker": "core\\IServices\\IUserService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IUserService.cs",
-              "RelativeToolTip": "core\\IServices\\IUserService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:46:36.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IManagerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IManagerRepository.cs",
-              "RelativeDocumentMoniker": "core\\IRepositories\\IManagerRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IManagerRepository.cs",
-              "RelativeToolTip": "core\\IRepositories\\IManagerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:02:02.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "data\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "data\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T02:47:46.322Z",
+              "WhenOpened": "2025-04-07T12:30:17.317Z",
               "EditorCaption": ""
             },
             {
@@ -282,59 +84,149 @@
               "RelativeDocumentMoniker": "api\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\UsersController.cs",
               "RelativeToolTip": "api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAIwHMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T20:45:49.548Z",
+              "WhenOpened": "2025-04-07T12:19:38.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ExamUpload.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
-              "RelativeDocumentMoniker": "core\\Models\\ExamUpload.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
-              "RelativeToolTip": "core\\Models\\ExamUpload.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:59:58.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
               "Title": "ExamService.cs",
               "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
               "RelativeDocumentMoniker": "service\\ExamService.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
               "RelativeToolTip": "service\\ExamService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T01:37:11.973Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "core\\IRepositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IUserRepository.cs",
-              "RelativeToolTip": "core\\IRepositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:45:25.204Z",
+              "WhenOpened": "2025-04-07T12:12:40.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\UserService.cs",
-              "RelativeDocumentMoniker": "service\\UserService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\UserService.cs",
-              "RelativeToolTip": "service\\UserService.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAuwKAAAAAAAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
+              "RelativeDocumentMoniker": "core\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
+              "RelativeToolTip": "core\\Models\\User.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:01:05.007Z",
+              "WhenOpened": "2025-04-07T10:57:52.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-07T10:43:59.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExamPost.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\ExamPost.cs",
+              "RelativeDocumentMoniker": "api\\Models\\ExamPost.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\ExamPost.cs",
+              "RelativeToolTip": "api\\Models\\ExamPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:23:44.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "core\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T13:40:45.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExamController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\ExamController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamController.cs",
+              "RelativeToolTip": "api\\Controllers\\ExamController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA7wFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:22:54.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExamUpload.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
+              "RelativeDocumentMoniker": "core\\Models\\ExamUpload.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
+              "RelativeToolTip": "core\\Models\\ExamUpload.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:32:48.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExamUploadController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\ExamUploadController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
+              "RelativeToolTip": "api\\Controllers\\ExamUploadController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAADwv4oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:32:07.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\ExamRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\ExamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T13:42:31.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Exam.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Exam.cs",
+              "RelativeDocumentMoniker": "core\\Models\\Exam.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Exam.cs",
+              "RelativeToolTip": "core\\Models\\Exam.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwCAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T13:41:30.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IExamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamRepository.cs",
+              "RelativeDocumentMoniker": "core\\IRepositories\\IExamRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamRepository.cs",
+              "RelativeToolTip": "core\\IRepositories\\IExamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T13:41:12.687Z",
               "EditorCaption": ""
             }
           ]
