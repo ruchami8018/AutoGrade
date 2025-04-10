@@ -11,11 +11,11 @@ namespace api.Extensions
     {
         public static void ConfigureServices(this IServiceCollection services)
         {
-            //services.AddScoped<IManagerRepository, ManagerRepository>();
+            services.AddScoped<IManagerRepository, ManagerRepository>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             //services.AddScoped<IStudentRepository, StudentRepository>();
-            //services.AddScoped<IExamUploadRepository, ExamUploadRepository>();
+            services.AddScoped<IExamUploadRepository, ExamUploadRepository>();
             //services.AddScoped<IAnswerRepository, AnswerRepository>();
             services.AddScoped<IExamRepository, ExamRepository>();
             //services.AddScoped<IAuthRepository, AuthRepository>();
@@ -24,8 +24,8 @@ namespace api.Extensions
             //services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IExamService, ExamService>();
             //services.AddScoped<IAnswerService, AnswerService>();
-            //services.AddScoped<IExamUploadService, ExamUploadService>();
-            //services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IExamUploadService, ExamUploadService>();
+            services.AddScoped<IUserService, UserService>();
 
 
 

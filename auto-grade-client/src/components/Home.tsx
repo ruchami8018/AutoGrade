@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       {currentUser.isLoggedIn ? (
         <>
-          <h2>MY EXAMS:</h2>
+          {/* <h2>MY EXAMS:</h2> */}
           <ExamsDashboard />
         </>
       ) : (

@@ -12,6 +12,7 @@ import ExamsDashboard from './components/exams/ExamsDashboard'
 import AddExam from './components/exams/AddExam'
 import { initialState } from "./store/UserStore";
 import DeleteExam from './components/exams/DeleteExam'
+import UpdateExam from './components/exams/UpdateExam'
 
 const theme = createTheme();
 
@@ -30,6 +31,8 @@ function App() {
             <Route path="/add-exam" element={<AddExam />} />
             {/* <Route path="/delete-exam" element={<DeleteExam />} /> */}
             <Route path="/add-exam" element={<AddExam />} />
+            <Route path="/update-exam" element={<UpdateExam />} />
+
             
           </Routes>
         </Router>

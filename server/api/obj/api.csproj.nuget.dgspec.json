@@ -60,9 +60,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.0-preview.12, )"
+            },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[3.7.416, )"
+              "version": "[4.0.0-preview.12, )"
             },
             "AutoMapper": {
               "target": "Package",

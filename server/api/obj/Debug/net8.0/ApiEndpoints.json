@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "examPost",
-        "Type": "api.Models.ExamPost",
+        "Type": "core.Models.ExamPost",
         "IsRequired": true
       }
     ],

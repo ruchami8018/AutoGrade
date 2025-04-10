@@ -15,6 +15,8 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const schoolRef = useRef<HTMLInputElement>(null);
 
+  // private apiEndpoint = 'http://localhost:5143/api/users';
+
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -43,12 +45,13 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
         userDispatch({
           type: 'CREATE',
           new_data: {
+            id: res.data.id,
             name: nameRef.current?.value || '',
             password: passwordREf.current?.value || '',
-            mail: mailRef.current?.value || '',
+            email: mailRef.current?.value || '',
             school: schoolRef.current?.value || '',
             exams: List <Exam>([]),
-            roles:'user',
+            role:'user',
             isLoggedIn: true
           }
         });

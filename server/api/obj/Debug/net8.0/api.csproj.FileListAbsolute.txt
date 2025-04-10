@@ -342,3 +342,6 @@ C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\obj\Debug\net8.0\api.genr
 C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\obj\Debug\net8.0\ref\api.dll
 C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\bin\Debug\net8.0\AWSSDK.Core.dll
 C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\bin\Debug\net8.0\AWSSDK.S3.dll
+C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\bin\Debug\net8.0\Sprache.dll
+C:\Users\user1\Desktop\תכנות\AutoGrade\server\api\bin\Debug\net8.0\AWSSDK.Extensions.NETCore.Setup.dll

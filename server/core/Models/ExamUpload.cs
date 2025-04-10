@@ -15,7 +15,7 @@ namespace core.Models
         public string StudentName { get; set; }//שם התלמיד ששלו המבחן
         public string FilePath { get; set; }//הניתוב של הקובץ בעצמו מAWS
         public DateTime UploadDate { get; set; } = DateTime.UtcNow;//זמן העלאת המבחן הנוכחי
-        public int Score { get; set; }//הציון הסופי של מבחן זה
+        public int? Score { get; set; }//הציון הסופי של מבחן זה
 
         public ExamUpload()
         {

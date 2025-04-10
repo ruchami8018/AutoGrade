@@ -29,13 +29,41 @@ namespace api.Controllers
             //_bucketName = configuration["AWS:BucketName"];
         }
 
+        //[HttpGet("presigned-url")]
+        //public async Task<IActionResult> GetPresignedUrl([FromQuery] string fileName, [FromQuery] string contentType)
+        //{
+        //    if (string.IsNullOrEmpty(fileName))
+        //        return BadRequest("שם הקובץ נדרש");
+
+        //    var request = new GetPreSignedUrlRequest
+        //    {
+        //        BucketName = _bucketName,
+        //        Key = fileName,
+        //        Verb = HttpVerb.PUT,
+        //        Expires = DateTime.UtcNow.AddMinutes(20)
+        //        // בלי ContentType בכלל
+        //    };
+
+
+        //    try
+        //    {
+        //        string url = _s3Client.GetPreSignedURL(request);
+        //        return Ok(new { url });
+        //    }
+        //    catch (AmazonS3Exception ex)
+        //    {
+        //        return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
+        //    }
+        //}
+
+
         [HttpGet("presigned-url")]
         public async Task<IActionResult> GetPresignedUrl([FromQuery] string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
                 return BadRequest("שם הקובץ נדרש");
 
-            var request = new GetPreSignedUrlRequest//משהו של אמזון
+            var request = new GetPreSignedUrlRequest
             {
                 BucketName = _bucketName,
                 Key = fileName, // קבצים נשמרים בתיקיית exams
@@ -46,6 +74,7 @@ namespace api.Controllers
                 //ContentType = "multipart/form-data"
             };
             //request.Headers["x-amz-acl"] = "bucket-owner-full-control";
+
             try
             {
                 Console.WriteLine(fileName);
@@ -57,6 +86,38 @@ namespace api.Controllers
                 return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
             }
         }
+
+
+        //[HttpGet("presigned-url")]
+        //public async Task<IActionResult> GetPresignedUrl([FromQuery] string fileName)
+        //{
+        //    if (string.IsNullOrEmpty(fileName))
+        //        return BadRequest("שם הקובץ נדרש");
+
+        //    var request = new GetPreSignedUrlRequest//משהו של אמזון
+        //    {
+        //        BucketName = _bucketName,
+        //        Key = fileName, // קבצים נשמרים בתיקיית exams
+        //        //Key = $"{fileName}", // קבצים נשמרים בתיקיית exams
+        //        Verb = HttpVerb.PUT,
+        //        Expires = DateTime.UtcNow.AddMinutes(20),
+        //        //ContentType = "application/pdf" // ניתן לשנות לסוג קובץ אחר
+        //        //ContentType = "multipart/form-data"
+        //    };
+        //    //request.Headers["x-amz-acl"] = "bucket-owner-full-control";
+        //    try
+        //    {
+        //        Console.WriteLine(fileName);
+
+        //        string url = _s3Client.GetPreSignedURL(request);
+        //        return Ok(new { url });
+        //    }
+        //    catch (AmazonS3Exception ex)
+        //    {
+        //        return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
+        //    }
+        //}
+
 
         [HttpPost("upload-url")]
         public async Task<IActionResult> UploadExamUrl([FromBody] ExamUploadDto request)
@@ -91,7 +152,6 @@ namespace api.Controllers
             await _examService.UpdateExamAsync(exam);
             return Ok(new { Message = "ה-URL נוספה בהצלחה למבחן", SubmissionNumber = submissionNumber });
         }
-
 
         //[Consumes("multipart/form-data")]
         //[HttpPost("upload")]

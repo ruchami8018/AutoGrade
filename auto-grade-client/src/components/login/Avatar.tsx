@@ -105,13 +105,13 @@ const ProfileAvatar = () => {
               <ListItemText primary="שם" secondary={currentUser?.name || "לא זמין"} />
             </ListItem>
             <ListItem>
-              <ListItemText primary="מייל" secondary={currentUser?.mail || "לא זמין"} />
+              <ListItemText primary="מייל" secondary={currentUser?.email || "לא זמין"} />
             </ListItem>
             <ListItem>
               <ListItemText primary="בית ספר" secondary={currentUser?.school || "לא זמין"} />
             </ListItem>
             <ListItem>
-              <ListItemText primary="משתמש" secondary={currentUser?.roles || "לא זמין"} />
+              <ListItemText primary="משתמש" secondary={currentUser?.role || "לא זמין"} />
             </ListItem>
           </List>
         </div>

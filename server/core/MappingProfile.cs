@@ -20,7 +20,7 @@ namespace core
             CreateMap<Manager, ManagerDto>().ReverseMap();
             CreateMap<Question, QuestionDto>().ReverseMap();
             CreateMap<Manager, ManagerDto>().ReverseMap();
-
+            CreateMap<ExamPost, Exam>();
 
         }
     }
