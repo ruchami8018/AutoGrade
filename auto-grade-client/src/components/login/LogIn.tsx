@@ -89,3 +89,65 @@ const LogIn = ({ onClose }: LoginProps) => {
 };
 
 export default LogIn;
+
+
+
+// import React, { useState, useContext } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { UserContext } from '../../store/UserStore';
+// import { loginUser } from '../../services/userService'; // ייבוא הפונקציה משירות המשתמשים
+
+// interface LoginProps {
+//   onClose: () => void;
+// }
+
+// const LogIn: React.FC<LoginProps> = ({ onClose }) => {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const { userDispatch } = useContext(UserContext);
+//   const navigate = useNavigate();
+
+//   const handleSubmit = async (event: React.FormEvent) => {
+//     event.preventDefault();
+//     const user = await loginUser(email, password); // שימוש בפונקציה מהשירות
+//     if (user) {
+//       userDispatch({ type: 'CREATE', new_data: user });
+//       onClose();
+//       navigate('/ExamsDashboard');
+//     } else {
+//       alert('התחברות נכשלה. בדוק את האימייל והסיסמה.');
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <h2>התחברות</h2>
+//       <form onSubmit={handleSubmit}>
+//         <div>
+//           <label htmlFor="email">אימייל:</label>
+//           <input
+//             type="email"
+//             id="email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="password">סיסמה:</label>
+//           <input
+//             type="password"
+//             id="password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+//         </div>
+//         <button type="submit">התחבר</button>
+//         <button type="button" onClick={onClose}>
+//           ביטול
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default LogIn;

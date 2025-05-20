@@ -277,6 +277,8 @@ const AddExam = () => {
   });
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [newExamId, setNewExamId] = useState<number | null>(null);
+
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -327,36 +329,40 @@ const AddExam = () => {
       setExamData(prev => ({
         ...prev,
         exampleExamPath: uploadUrl.split('?')[0]
+        
       }));
 
     } catch (error) {
       console.error('Error uploading file:', error);
+
     }
   };
 
+//   const handleNavigateToUpload = () => {
+//     if (newExamId !== null && examAddedSuccessfully) {
+//         navigate(`/upload-student-exam/${newExamId}`);
+//     }
+// };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // Create the exam data on the server
-      const examResponse = await axios.post('https://localhost:7158/api/Exam', {
+      // Send the exam data to the server
+      const response = await axios.post('https://localhost:7158/api/Exam', {
         ...examData,
         userId: currentUser.id
       });
       
-      // Assuming the exam was created, you can get the exam ID from the response
-      const examId = examResponse.data.id;
-
-      // Now update the examData state with the examId
-      setExamData(prev => ({
-        ...prev,
-        examId: examId
-      }));
-
-      // Navigate to the Exams Dashboard
-      navigate('/ExamsDashboard');
+      // Get the created exam ID from the response
+      const createdExamId = response.data.id;
+      setNewExamId(createdExamId);
+      
+      // Navigate to UploadStudentExam with the new exam ID
+      navigate(`/upload-student-exam/${createdExamId}`);
     } catch (error) {
-      alert("ההוספת המבחן נכשלה");
+      // If there's an error, alert the user and navigate to ExamsDashboard
+      alert("הוספת המבחן נכשלה");
       console.error('Error adding exam:', error);
+      navigate('/ExamsDashboard');
     }
   };
 
@@ -423,6 +429,9 @@ const AddExam = () => {
           color="primary"
           sx={{ mt: 2 }}
           disabled={!file || !examData.subject || !examData.title || !examData.class}
+
+            // navigate(`/upload-student-exam/${examData.examId}`)}
+
         >
           הוסף מבחן
         </Button>
@@ -432,3 +441,76 @@ const AddExam = () => {
 };
 
 export default AddExam;
+
+
+// =======================FROM GEMINY========
+
+// import React, { useState, useContext } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { UserContext } from '../../store/UserStore';
+// import { addExam } from '../../services/examService'; // ייבוא הפונקציה משירות המבחנים
+
+// const AddExam = () => {
+//     const [subject, setSubject] = useState('');
+//     const [title, setTitle] = useState('');
+//     const [classNumber, setClassNumber] = useState('');
+//     const { currentUser } = useContext(UserContext);
+//     const navigate = useNavigate();
+
+//     const handleSubmit = async (event: React.FormEvent) => {
+//         event.preventDefault();
+//         if (currentUser.id) {
+//             try {
+//                 const newExam = await addExam(currentUser.id, subject, title, Number(classNumber));
+//                 // לאחר הוספת המבחן בהצלחה, אפשר לעדכן את הסטור או לנווט
+//                 navigate('/ExamsDashboard');
+//             } catch (error) {
+//                 alert('שגיאה בהוספת המבחן.');
+//                 console.error('שגיאה בהוספת המבחן:', error);
+//             }
+//         } else {
+//             alert('משתמש לא מחובר.');
+//         }
+//     };
+
+//     return (
+//         <div>
+//             <h2>הוספת מבחן חדש</h2>
+//             <form onSubmit={handleSubmit}>
+//                 <div>
+//                     <label htmlFor="subject">נושא:</label>
+//                     <input
+//                         type="text"
+//                         id="subject"
+//                         value={subject}
+//                         onChange={(e) => setSubject(e.target.value)}
+//                     />
+//                 </div>
+//                 <div>
+//                     <label htmlFor="title">כותרת:</label>
+//                     <input
+//                         type="text"
+//                         id="title"
+//                         value={title}
+//                         onChange={(e) => setTitle(e.target.value)}
+//                     />
+//                 </div>
+//                 <div>
+//                     <label htmlFor="classNumber">כיתה:</label>
+//                     <input
+//                         type="text"
+//                         id="classNumber"
+//                         value={classNumber}
+//                         onChange={(e) => setClassNumber(e.target.value)}
+//                     />
+//                 </div>
+//                 <button type="submit">הוסף מבחן</button>
+//                 <button type="button" onClick={() => navigate('/ExamsDashboard')}>
+//                     ביטול
+//                 </button>
+//             </form>
+//         </div>
+//     );
+// };
+
+// export default AddExam;

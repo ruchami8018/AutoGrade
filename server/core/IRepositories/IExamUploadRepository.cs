@@ -1,4 +1,5 @@
 ﻿using core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,15 @@ namespace core.IRepositories
 {
     public interface IExamUploadRepository
     {
-        Task<ExamUpload> GetExamUploadAsync(int id, int exam_id);
+        Task<ExamUpload> GetExamUploadByIdAsync(int id);
 
         Task<List<ExamUpload>> GetAllByIdAsync(int id);
 
         Task<bool> AddExamUploadAsync(ExamUpload examUpload);
+        Task<bool> UpdateExamUploadAsync(ExamUpload examUpload);
+
+        Task<bool> DeleteExamUploadAsync(int id);
+    
 
     }
 }

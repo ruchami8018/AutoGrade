@@ -84,3 +84,93 @@ const Update = ({ onClose }: { onClose: () => void }) => {
     );
 };
 export default Update;
+
+
+
+// import React, { useState, useContext, useEffect } from 'react';
+// import { UserContext } from '../../store/UserStore';
+// import { updateUser, getUserById } from '../../services/userService'; // ייבוא הפונקציות משירות המשתמשים
+
+// const UpdateDetails = ({ onClose }: { onClose: () => void }) => {
+//   const { currentUser, userDispatch } = useContext(UserContext);
+//   const [name, setName] = useState(currentUser.name || '');
+//   const [email, setEmail] = useState(currentUser.email || '');
+//   const [school, setSchool] = useState(currentUser.school || '');
+//   const [password, setPassword] = useState(''); // אפשרות להוסיף שינוי סיסמה
+
+//   useEffect(() => {
+//     const fetchUserDetails = async () => {
+//       if (currentUser.id) {
+//         const userDetails = await getUserById(currentUser.id); // שימוש בפונקציה מהשירות
+//         if (userDetails) {
+//           setName(userDetails.name);
+//           setEmail(userDetails.email);
+//           setSchool(userDetails.school || '');
+//         }
+//       }
+//     };
+
+//     fetchUserDetails();
+//   }, [currentUser.id]);
+
+//   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+//     event.preventDefault();
+//     if (currentUser.id) {
+//       const updatedUser = await updateUser(currentUser.id, { 
+//         ...currentUser,
+//         name, 
+//         email, 
+//         school
+//       }); // שימוש בפונקציה מהשירות
+//       if (updatedUser) {
+//         userDispatch({ type: 'UPDATE', new_data: updatedUser });
+//         onClose();
+//         alert('הפרטים עודכנו בהצלחה!');
+//       } else {
+//         alert('עדכון הפרטים נכשל.');
+//       }
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <h2>עדכון פרטים</h2>
+//       <form onSubmit={handleSubmit}>
+//         <div>
+//           <label htmlFor="name">שם:</label>
+//           <input
+//             type="text"
+//             id="name"
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="email">אימייל:</label>
+//           <input
+//             type="email"
+//             id="email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="school">בית ספר:</label>
+//           <input
+//             type="text"
+//             id="school"
+//             value={school}
+//             onChange={(e) => setSchool(e.target.value)}
+//           />
+//         </div>
+//         {/* אפשרות להוסיף שדה לשינוי סיסמה */}
+//         <button type="submit">עדכן</button>
+//         <button type="button" onClick={onClose}>
+//           ביטול
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default UpdateDetails;

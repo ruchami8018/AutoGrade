@@ -122,7 +122,7 @@ namespace api.Controllers
         [HttpPost("upload-url")]
         public async Task<IActionResult> UploadExamUrl([FromBody] ExamUploadDto request)
         {
-            if (string.IsNullOrEmpty(request.FileUrl))
+            if (string.IsNullOrEmpty(request.FilePath))
                 return BadRequest("ה-URL לא תקין");
 
             var exam = await _examService.GetByIdAsync(request.ExamId);
@@ -139,7 +139,7 @@ namespace api.Controllers
                 UserId = request.UserId,
                 ExamId = request.ExamId,
                 StudentName = request.StudentName,
-                FilePath = request.FileUrl,
+                FilePath = request.FilePath,
                 UploadDate = DateTime.UtcNow,
                 Score = 0, // ציון ראשוני
                 SubmissionNumber = submissionNumber
@@ -151,6 +151,43 @@ namespace api.Controllers
             exam.ExamUploads.Add(newExamUpload);
             await _examService.UpdateExamAsync(exam);
             return Ok(new { Message = "ה-URL נוספה בהצלחה למבחן", SubmissionNumber = submissionNumber });
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteExamUpload(int id)
+        {
+            var result = await _examUploadService.DeleteExamUploadAsync(id);
+            if (result)
+            {
+                return Ok(new { Message = $"ההעלאה עם מזהה {id} נמחקה בהצלחה." });
+            }
+            else
+            {
+                return NotFound($"לא נמצאה העלאה עם מזהה {id}.");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateExamUpload(int id, [FromBody] ExamUploadDto request)
+        {
+            if (id != request.ExamId) // ודא שה-ID בנתיב תואם ל-ID בגוף הבקשה (אם ה-DTO מכיל ExamId)
+            {
+                return BadRequest("מזהה ההעלאה בנתיב אינו תואם למזהה בגוף הבקשה.");
+            }
+
+            var existingUpload = await _examUploadService.GetExamUploadByIdAsync(id);
+            if (existingUpload == null)
+            {
+                return NotFound($"לא נמצאה העלאה עם מזהה {id}.");
+            }
+
+            // עדכן את המאפיינים של ההעלאה הקיימת עם הערכים מהבקשה
+            existingUpload.StudentName = request.StudentName;
+            existingUpload.FilePath = request.FilePath;
+            // אם יש שדות נוספים שאתה רוצה לאפשר עדכון (כמו Score), עדכן אותם כאן
+
+            await _examUploadService.UpdateExamUploadAsync(existingUpload);
+
+            return Ok(new { Message = $"ההעלאה עם מזהה {id} עודכנה בהצלחה." });
         }
 
         //[Consumes("multipart/form-data")]

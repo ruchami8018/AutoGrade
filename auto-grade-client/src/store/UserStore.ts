@@ -66,9 +66,10 @@
 // export default new UserStore()
 
 
-import { createContext } from "react"
+
+
+import { createContext, useReducer } from "react"
 import { User } from "../models/User"
-import { Exam } from "../models/Exam"
 import { Action } from "../models/Action";
 import { List } from "immutable";
 
@@ -78,8 +79,8 @@ export const initialState: User = {
     password: '',
     email: '',
     school: '',
-    role: '', 
-    exams: List<Exam>(), 
+    role: '',
+    exams: List(),
     isLoggedIn: false
 };
 export const UserContext=createContext<{
@@ -91,13 +92,13 @@ export const userReducer=(current = initialState,action:Action): User =>{
     {
         case 'CREATE':
             return {
-              ...current, 
-              ...action.new_data,
-              isLoggedIn: true
-             }
+                ...current,
+                ...action.new_data,
+                isLoggedIn: true
+            }
         case 'UPDATE':
             return {
-                ...current, 
+                ...current,
                 ...action.new_data
             }
         case 'LOGOUT':

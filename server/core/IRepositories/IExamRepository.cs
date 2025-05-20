@@ -1,4 +1,5 @@
 ﻿using core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace core.IRepositories
         Task<List<Exam>> GetExamsByUserIdAsync(int userId);
         Task<bool> UpdateExamAsync(Exam exam);
         Task<bool> DeleteExamAsync(int id);
+       
     }
 }

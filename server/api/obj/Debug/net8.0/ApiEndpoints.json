@@ -162,6 +162,43 @@
   },
   {
     "ContainingType": "api.Controllers.ExamUploadController",
+    "Method": "DeleteExamUpload",
+    "RelativePath": "api/ExamUpload/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.ExamUploadController",
+    "Method": "UpdateExamUpload",
+    "RelativePath": "api/ExamUpload/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "core.DTOs.ExamUploadDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.ExamUploadController",
     "Method": "GetPresignedUrl",
     "RelativePath": "api/ExamUpload/presigned-url",
     "HttpMethod": "GET",

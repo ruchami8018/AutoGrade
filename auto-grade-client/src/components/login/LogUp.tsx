@@ -1,4 +1,3 @@
-
 import { Button, TextField } from '@mui/material';
 import axios from 'axios';
 import { FormEvent, useContext, useRef } from 'react';
@@ -15,9 +14,6 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const schoolRef = useRef<HTMLInputElement>(null);
 
-  // private apiEndpoint = 'http://localhost:5143/api/users';
-
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
@@ -28,18 +24,6 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
         school: schoolRef.current?.value,
         role:'user'
       });
-
-      // try {
-      //   // const response = await register(name, email, password, "User");
-      //   const { token, user } = res;
-      //   // console.log('tttt' + token);
-      //   // console.log('uuuu', user);
-      //   localStorage.setItem("token", token);
-
-      //   userDispatch({
-      //       type: "REGISTER",
-      //       data: user,
-      //   });
 
         localStorage.setItem("token", res.data.token);
         userDispatch({
@@ -118,3 +102,90 @@ const LogUp = ({ onClose }: { onClose: () => void }) => {
   );
 };
 export default LogUp;
+
+
+
+// import React, { useState, useContext } from 'react';
+// import { Button, TextField } from '@mui/material';
+// import { useNavigate } from 'react-router-dom';
+// import { UserContext } from '../../store/UserStore';
+// import { signupUser } from '../../services/userService';
+// import CommonModal from '../design/CommonModal';
+
+// const LogUp = ({ onClose }: { onClose: () => void }) => {
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [school, setSchool] = useState('');
+//   const { userDispatch } = useContext(UserContext);
+//   const navigate = useNavigate();
+
+//   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+//     event.preventDefault();
+//     try {
+//       const user = await signupUser(name, email, password, school);
+//       if (user) {
+//         userDispatch({ type: 'CREATE', new_data: user });
+//         onClose();
+//         navigate('/ExamsDashboard');
+//       }
+//     } catch (error: any) {
+//       alert(error.response?.data?.message || 'הרשמה נכשלה. נסה שוב.');
+//     }
+//   };
+
+//   return (
+//     <CommonModal
+//       open={true}
+//       onClose={onClose}
+//       title="הרשמה"
+//     >
+//       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+//         <TextField
+//           label="שם"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//           variant="outlined"
+//           fullWidth
+//           required
+//         />
+//         <TextField
+//           label="מייל"
+//           type="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           variant="outlined"
+//           fullWidth
+//           required
+//         />
+//         <TextField
+//           label="בית ספר"
+//           value={school}
+//           onChange={(e) => setSchool(e.target.value)}
+//           variant="outlined"
+//           fullWidth
+//           required
+//         />
+//         <TextField
+//           label="סיסמה"
+//           type="password"
+//           value={password}
+//           onChange={(e) => setPassword(e.target.value)}
+//           variant="outlined"
+//           fullWidth
+//           required
+//         />
+//         <Button
+//           type="submit"
+//           variant="contained"
+//           color="primary"
+//           fullWidth
+//         >
+//           הירשם
+//         </Button>
+//       </form>
+//     </CommonModal>
+//   );
+// };
+
+// export default LogUp;
