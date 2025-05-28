@@ -314,6 +314,20 @@ const Header = () => {
                             Update Details
                         </Button>
                         <Button
+                            component={RouterLink}
+                            to="/teachers-chat"
+                            variant="contained"
+                            sx={{
+                                background: bgGradient,
+                                '&:hover': {
+                                    background: gradients[1],
+                                    opacity: 0.9
+                                }
+                            }}
+                        >
+                            צ'אט מורים
+                        </Button>
+                        <Button
                             onClick={() => navigate('/ExamsDashboard')}
                             variant="contained"
                             sx={{

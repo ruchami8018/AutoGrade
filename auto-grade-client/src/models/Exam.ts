@@ -1,14 +1,4 @@
-// export type Exam = {
-
 import { ExamUpload } from "./ExamUpload";
-
-//     subject : string, 
-//     title : string,
-//     class : string[]
-// }
-
-
-
 export type Exam = {
     id: number;
     userId: number;
@@ -19,4 +9,5 @@ export type Exam = {
     questions: any[];
     exampleExamPath: string;
     examUploads: ExamUpload[];
+    contentType: string;
 }

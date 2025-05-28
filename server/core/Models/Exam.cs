@@ -8,7 +8,7 @@ namespace core.Models
 {
     public class Exam
     {
-        public int Id { get; set; }
+        public int ExamId { get; set; }
         public int UserId { get; set; }
         public string Subject { get; set; }
         public string Title { get; set; }
@@ -25,7 +25,7 @@ namespace core.Models
         }
         public Exam(int id, int userId, string subject, string title, DateTime created_at,List<Question> questions, List<ExamUpload> examsUpload,string @class)
         {
-            Id = id;
+            ExamId = id;
             UserId = userId;
             Subject = subject;
             Title = title;

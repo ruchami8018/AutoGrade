@@ -1,4 +1,6 @@
-﻿using core.Models;
+﻿using core.DTOs;
+using core.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +19,7 @@ namespace core.IServices
         Task<bool> UpdateExamUploadAsync(ExamUpload examUpload);
 
         Task<bool> DeleteExamUploadAsync(int id);
+        Task<List<ExamResultDto>> ProcessStudentExamsAsync(List<IFormFile> files, int examId);
+
     }
 }

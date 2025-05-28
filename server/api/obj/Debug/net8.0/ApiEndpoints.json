@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "api.Controllers.api.Controllers.ChatController",
+    "Method": "GetMessages",
+    "RelativePath": "api/Chat/messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.api.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/messages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "api.Controllers.api.Controllers.SendMessageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api.Controllers.ExamController",
     "Method": "Post",
     "RelativePath": "api/Exam",
@@ -15,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Boolean",
+        "Type": "core.Models.Exam",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -199,7 +225,7 @@
   },
   {
     "ContainingType": "api.Controllers.ExamUploadController",
-    "Method": "GetPresignedUrl",
+    "Method": "GeneratePresignedUrlAsync",
     "RelativePath": "api/ExamUpload/presigned-url",
     "HttpMethod": "GET",
     "IsController": true,
@@ -207,6 +233,11 @@
     "Parameters": [
       {
         "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "contentType",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -228,6 +259,42 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.UsersController",
+    "Method": "GetUsers",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.UsersController",
+    "Method": "Get",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "core.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "api.Controllers.UsersController",

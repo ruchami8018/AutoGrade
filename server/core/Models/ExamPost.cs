@@ -13,5 +13,6 @@ namespace core.Models
         public string Title { get; set; }
         public string Class { get; set; }
         public string ExampleExamPath { get; set; }
+
     }
 }

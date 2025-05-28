@@ -55,37 +55,82 @@ namespace api.Controllers
         //        return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
         //    }
         //}
+        //[HttpPost("process-student-exams/{examId}")]
+        //public async Task<IActionResult> ProcessStudentExams(int examId, [FromForm] List<IFormFile> files)
+        //{
+        //    // Fixed the missing method call in _examService. Assuming a method named ProcessStudentExamsAsync exists.
+        //    var results = await _examService.ProcessStudentExamsAsync(files, examId);
+
+        //    var stats = new
+        //    {
+        //        Max = results.Max(r => r.Grade),
+        //        Min = results.Min(r => r.Grade),
+        //        Avg = results.Average(r => r.Grade),
+        //        //Median = results.OrderBy(r => r.Grade).ElementAt(results.Count / 2)
+        //    };
+
+        //    return Ok(new { results, stats });
+        //}
 
 
+
+
+        //[HttpGet("presigned-url")]
+        //public async Task<IActionResult> GetPresignedUrl([FromQuery] string fileName)
+        //{
+        //    if (string.IsNullOrEmpty(fileName))
+        //        return BadRequest("שם הקובץ נדרש");
+
+        //    var request = new GetPreSignedUrlRequest
+        //    {
+        //        BucketName = _bucketName,
+        //        Key = fileName, // קבצים נשמרים בתיקיית exams
+        //        //Key = $"{fileName}", // קבצים נשמרים בתיקיית exams
+        //        Verb = HttpVerb.PUT,
+        //        Expires = DateTime.UtcNow.AddMinutes(20),
+        //        //ContentType = "application/pdf" // ניתן לשנות לסוג קובץ אחר
+        //        //ContentType = "multipart/form-data"
+        //    };
+        //    //request.Headers["x-amz-acl"] = "bucket-owner-full-control";
+
+        //    try
+        //    {
+        //        Console.WriteLine(fileName);
+        //        string url = _s3Client.GetPreSignedURL(request);
+        //        return Ok(new { url });
+        //    }
+        //    catch (AmazonS3Exception ex)
+        //    {
+        //        return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
+        //    }
+        //}
+
+        
         [HttpGet("presigned-url")]
-        public async Task<IActionResult> GetPresignedUrl([FromQuery] string fileName)
+        public async Task<IActionResult> GeneratePresignedUrlAsync(string fileName, string contentType)
         {
-            if (string.IsNullOrEmpty(fileName))
-                return BadRequest("שם הקובץ נדרש");
+            var bucketName = _bucketName;
+            var key = $"{Guid.NewGuid()}_{fileName}";
 
             var request = new GetPreSignedUrlRequest
             {
-                BucketName = _bucketName,
-                Key = fileName, // קבצים נשמרים בתיקיית exams
-                //Key = $"{fileName}", // קבצים נשמרים בתיקיית exams
+                BucketName = bucketName,
+                Key = key,
                 Verb = HttpVerb.PUT,
-                Expires = DateTime.UtcNow.AddMinutes(20),
-                //ContentType = "application/pdf" // ניתן לשנות לסוג קובץ אחר
-                //ContentType = "multipart/form-data"
+                Expires = DateTime.UtcNow.AddMinutes(15),
+                ContentType = contentType
             };
-            //request.Headers["x-amz-acl"] = "bucket-owner-full-control";
 
-            try
+            var uploadUrl = _s3Client.GetPreSignedURL(request);
+            var publicUrl = $"https://{bucketName}.s3.amazonaws.com/{key}";
+
+            return Ok(new
             {
-                Console.WriteLine(fileName);
-                string url = _s3Client.GetPreSignedURL(request);
-                return Ok(new { url });
-            }
-            catch (AmazonS3Exception ex)
-            {
-                return StatusCode(500, $"Error generating presigned URL: {ex.Message}");
-            }
+                uploadUrl,
+                publicUrl
+            });
         }
+
 
 
         //[HttpGet("presigned-url")]
@@ -125,12 +170,12 @@ namespace api.Controllers
             if (string.IsNullOrEmpty(request.FilePath))
                 return BadRequest("ה-URL לא תקין");
 
-            var exam = await _examService.GetByIdAsync(request.ExamId);
+            var exam = await _examService.GetByIdAsync(request.ExamId ?? 0);
             if (exam == null)
                 return NotFound("המבחן לא נמצא");
 
             // חישוב מספר ההגשה של התלמיד
-            var existingUploads = await _examUploadService.GetAllByIdAsync(request.ExamId) ?? new List<ExamUpload>();
+            var existingUploads = await _examUploadService.GetAllByIdAsync(request.ExamId ?? 0) ?? new List<ExamUpload>();
             int submissionNumber = existingUploads.Count + 1;
 
             // יצירת אובייקט חדש של ExamUpload
@@ -152,6 +197,7 @@ namespace api.Controllers
             await _examService.UpdateExamAsync(exam);
             return Ok(new { Message = "ה-URL נוספה בהצלחה למבחן", SubmissionNumber = submissionNumber });
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteExamUpload(int id)
         {
@@ -189,6 +235,7 @@ namespace api.Controllers
 
             return Ok(new { Message = $"ההעלאה עם מזהה {id} עודכנה בהצלחה." });
         }
+
 
         //[Consumes("multipart/form-data")]
         //[HttpPost("upload")]

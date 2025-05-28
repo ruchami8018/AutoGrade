@@ -1,6 +1,8 @@
-﻿using core.IRepositories;
+﻿using core.DTOs;
+using core.IRepositories;
 using core.IServices;
 using core.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +40,18 @@ namespace service
         public async Task<bool> UpdateExamUploadAsync(ExamUpload examUpload)
         {
             return await _examUploadRepository.UpdateExamUploadAsync(examUpload);
+        }
+        public Task<List<ExamResultDto>> ProcessStudentExamsAsync(List<IFormFile> files, int examId)
+        {
+            var results = files.Select(file => new ExamResultDto
+            {
+                StudentName = Path.GetFileNameWithoutExtension(file.FileName),
+                StudentEmail = $"{Path.GetFileNameWithoutExtension(file.FileName)}@example.com",
+                Grade = 100,
+                Feedback = "עבודה מעולה!"
+            }).ToList();
+
+            return Task.FromResult(results);
         }
 
     }

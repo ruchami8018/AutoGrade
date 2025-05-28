@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "api/1.0.0": {
         "dependencies": {
-          "AWSSDK.Extensions.NETCore.Setup": "4.0.0-preview.12",
-          "AWSSDK.S3": "4.0.0-preview.12",
+          "AWSSDK.Extensions.NETCore.Setup": "3.7.300",
+          "AWSSDK.S3": "4.0.0.7",
           "AutoMapper": "14.0.0",
           "DotNetEnv": "3.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.5",
@@ -37,36 +37,36 @@
           }
         }
       },
-      "AWSSDK.Core/4.0.0-preview.12": {
+      "AWSSDK.Core/4.0.0.5": {
         "runtime": {
           "lib/net8.0/AWSSDK.Core.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.0.0.5"
           }
         }
       },
-      "AWSSDK.Extensions.NETCore.Setup/4.0.0-preview.12": {
+      "AWSSDK.Extensions.NETCore.Setup/3.7.300": {
         "dependencies": {
-          "AWSSDK.Core": "4.0.0-preview.12",
+          "AWSSDK.Core": "4.0.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.3",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.7.0"
           }
         }
       },
-      "AWSSDK.S3/4.0.0-preview.12": {
+      "AWSSDK.S3/4.0.0.7": {
         "dependencies": {
-          "AWSSDK.Core": "4.0.0-preview.12"
+          "AWSSDK.Core": "4.0.0.5"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.S3.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.0.0.7"
           }
         }
       },
@@ -1668,6 +1668,7 @@
       },
       "data/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "4.0.0.7",
           "DotNetEnv": "3.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.5",
           "Microsoft.EntityFrameworkCore": "8.0.0",
@@ -1716,26 +1717,26 @@
       "path": "automapper/14.0.0",
       "hashPath": "automapper.14.0.0.nupkg.sha512"
     },
-    "AWSSDK.Core/4.0.0-preview.12": {
+    "AWSSDK.Core/4.0.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PnUdGdbA1rEKf6qTo2GZv2o5h4ubsQHp7Dhb1h2K+S/G0BcsLQ6pYO4Ml+Ovf9xWLVsam/h1fMlhMbSndylbnw==",
-      "path": "awssdk.core/4.0.0-preview.12",
-      "hashPath": "awssdk.core.4.0.0-preview.12.nupkg.sha512"
+      "sha512": "sha512-NG31J9azTmY1GKOZd+MFGLUsuD472AGz4BUceTiw0pdYkexD+xJ8kA87hDp/OTk2b6xgrhkQIpnttzIekkMSvw==",
+      "path": "awssdk.core/4.0.0.5",
+      "hashPath": "awssdk.core.4.0.0.5.nupkg.sha512"
     },
-    "AWSSDK.Extensions.NETCore.Setup/4.0.0-preview.12": {
+    "AWSSDK.Extensions.NETCore.Setup/3.7.300": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nm0pyGpt5GkhKXcie8gsX6T1ZgXjdlg+2kgSO74j0/+/k3WdirKbxLsggoBjCoxn7GCCrg0r5OaRl/cEUNKmQQ==",
-      "path": "awssdk.extensions.netcore.setup/4.0.0-preview.12",
-      "hashPath": "awssdk.extensions.netcore.setup.4.0.0-preview.12.nupkg.sha512"
+      "sha512": "sha512-zMxAHFYSAWHsVV9Cn96nE+V40agRCjT0etF10f0d/nFMMb1z7lecVwNadq9JYyqlDj+jsVRH9ydk4Al4v/1+jg==",
+      "path": "awssdk.extensions.netcore.setup/3.7.300",
+      "hashPath": "awssdk.extensions.netcore.setup.3.7.300.nupkg.sha512"
     },
-    "AWSSDK.S3/4.0.0-preview.12": {
+    "AWSSDK.S3/4.0.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KdXX9LKKrngDpnI8RfxY9N467KOP6rPwPS4Cktizq9XfPEn5jsE+5Wig79Em3j8lhHO9Q4+fZfvly3qHJx6/Ew==",
-      "path": "awssdk.s3/4.0.0-preview.12",
-      "hashPath": "awssdk.s3.4.0.0-preview.12.nupkg.sha512"
+      "sha512": "sha512-dFELsA+Y7aXmvCTL83+oIWmr+0s/GpkqCKZK1ac7HPdYQFv+QHEAhrXdCJknsCKqK+v0yefkLzuKuSSP6k4tmA==",
+      "path": "awssdk.s3/4.0.0.7",
+      "hashPath": "awssdk.s3.4.0.0.7.nupkg.sha512"
     },
     "Azure.Core/1.25.0": {
       "type": "package",

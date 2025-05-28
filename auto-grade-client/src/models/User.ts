@@ -1,7 +1,7 @@
 import { Exam } from "./Exam"
 import { List } from "immutable";
 
-export type User = {
+export interface User {
     id: number,
     name: string,
     email: string,

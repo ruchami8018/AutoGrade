@@ -256,14 +256,14 @@
 // //   }
 // // };
 
-
-
 import { useState, useContext } from 'react';
 import { Container, TextField, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../store/UserStore';
 import axios from 'axios';
 import { CloudUpload } from '@mui/icons-material';
+import { useEffect } from 'react';
+
 
 const AddExam = () => {
   const navigate = useNavigate();
@@ -278,6 +278,10 @@ const AddExam = () => {
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [newExamId, setNewExamId] = useState<number | null>(null);
+
+useEffect(() => {
+  console.log("exampleExamPath התעדכן ל:", examData.exampleExamPath);
+}, [examData.exampleExamPath]);
 
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -318,18 +322,24 @@ const AddExam = () => {
         }
       });
 
-      const uploadUrl = presignedUrlResponse.data.url;
+      const uploadUrl = presignedUrlResponse.data.uploadUrl;
+      const publicUrl = presignedUrlResponse.data.publicUrl;
+      examData.exampleExamPath = publicUrl;
 
-      await axios.put(uploadUrl, fileToUpload, {
+      console.log("Upload URL:", uploadUrl);  
+      console.log(fileToUpload.name, fileToUpload.type, fileToUpload.size);
+
+      await axios.put(uploadUrl, fileToUpload, {//לא מחזיר כלום
         headers: {
           'Content-Type': fileToUpload.type
         }
       });
+      console.log("Upload response:");  
 
       setExamData(prev => ({
         ...prev,
-        exampleExamPath: uploadUrl.split('?')[0]
-        
+        exampleExamPath: publicUrl,
+        contentType: fileToUpload.type
       }));
 
     } catch (error) {
@@ -338,22 +348,24 @@ const AddExam = () => {
     }
   };
 
-//   const handleNavigateToUpload = () => {
-//     if (newExamId !== null && examAddedSuccessfully) {
-//         navigate(`/upload-student-exam/${newExamId}`);
-//     }
-// };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      console.log("exampleExamPath:", examData.exampleExamPath);
+      
       // Send the exam data to the server
       const response = await axios.post('https://localhost:7158/api/Exam', {
         ...examData,
-        userId: currentUser.id
+        exampleExamPath: examData.exampleExamPath,
+        userId: currentUser.id,
+        examId: newExamId,
+        // contentType: examData.contentType
       });
-      
+
+      console.log("Exam added successfully:", response); 
       // Get the created exam ID from the response
-      const createdExamId = response.data.id;
+      const createdExamId = response.data.examId;
+      console.log("Created exam ID:", createdExamId);
       setNewExamId(createdExamId);
       
       // Navigate to UploadStudentExam with the new exam ID
@@ -441,7 +453,6 @@ const AddExam = () => {
 };
 
 export default AddExam;
-
 
 // =======================FROM GEMINY========
 

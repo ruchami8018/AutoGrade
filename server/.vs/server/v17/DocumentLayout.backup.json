@@ -3,16 +3,71 @@
   "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\exampost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\exampost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Exams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\examupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\examupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\iexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\iservices\\iexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\examrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\examrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\examuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\examuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\examresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\examresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\examdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\examdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\iexamuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,27 +78,130 @@
       "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\examuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ExamsUploads.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\examuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\assistantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\assistantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\examuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\examuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\chatmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\chatmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Exams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\iservices\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\ichatmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\ichatmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\createchatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\createchatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\assistantrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\assistantrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5869EE00-761C-4F48-90E9-DFAD2D93CCE5}|service\\service.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\irepositories\\iexamuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\irepositories\\iexamuploadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\core\\dtos\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52653DB4-06AF-4148-A1B8-1AB8FB2FCA20}|core\\core.csproj|solutionrelative:core\\dtos\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\extensions\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\extensions\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\extensions\\jwtextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\extensions\\jwtextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ChatMessages.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3F614FF-D1B7-44A5-8B8C-771CBAB76DEE}|api\\api.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\autograde\\server\\data\\migrations\\20250521182042_addchatmessagetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BEFD40-BFC9-44E1-8095-B1B1C35C8845}|data\\data.csproj|solutionrelative:data\\migrations\\20250521182042_addchatmessagetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,147 +211,628 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.Exams.sql",
+              "DocumentIndex": 4,
+              "Title": "dbo.Exams [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Exams.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.Exams.sql",
+              "ToolTip": "dbo.Exams [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-09T18:04:10.656Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
-              "RelativeDocumentMoniker": "data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
-              "RelativeToolTip": "data\\DataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:37:37.047Z",
+              "WhenOpened": "2025-05-25T20:25:11.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "api\\Extensions\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\ServiceExtensions.cs",
-              "RelativeToolTip": "api\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:37:19.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExamService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
-              "RelativeDocumentMoniker": "service\\ExamService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
-              "RelativeToolTip": "service\\ExamService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:28:03.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExamUploadDto.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamUploadDto.cs",
-              "RelativeDocumentMoniker": "core\\DTOs\\ExamUploadDto.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamUploadDto.cs",
-              "RelativeToolTip": "core\\DTOs\\ExamUploadDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:17:27.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IExamUploadService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
-              "RelativeDocumentMoniker": "core\\IServices\\IExamUploadService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
-              "RelativeToolTip": "core\\IServices\\IExamUploadService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:11:48.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ExamController.cs",
               "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamController.cs",
               "RelativeDocumentMoniker": "api\\Controllers\\ExamController.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamController.cs",
               "RelativeToolTip": "api\\Controllers\\ExamController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAowDsAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwC4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T09:04:09.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExamUploadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
-              "RelativeDocumentMoniker": "data\\Repositories\\ExamUploadRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
-              "RelativeToolTip": "data\\Repositories\\ExamUploadRepository.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFcAAAADAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ExamPost.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamPost.cs",
+              "RelativeDocumentMoniker": "core\\Models\\ExamPost.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamPost.cs",
+              "RelativeToolTip": "core\\Models\\ExamPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:02:18.051Z",
+              "WhenOpened": "2025-05-22T16:55:11.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExamUploadService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
-              "RelativeDocumentMoniker": "service\\ExamUploadService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
-              "RelativeToolTip": "service\\ExamUploadService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:55:48.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ExamUploadController.cs",
               "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
               "RelativeDocumentMoniker": "api\\Controllers\\ExamUploadController.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ExamUploadController.cs",
               "RelativeToolTip": "api\\Controllers\\ExamUploadController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAgwPMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAuwG4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:54:36.173Z",
+              "WhenOpened": "2025-05-22T16:40:56.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "core\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\MappingProfile.cs",
+              "RelativeToolTip": "core\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:15:22.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExamUpload.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
+              "RelativeDocumentMoniker": "core\\Models\\ExamUpload.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ExamUpload.cs",
+              "RelativeToolTip": "core\\Models\\ExamUpload.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:55:22.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IExamRepository.cs",
               "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamRepository.cs",
               "RelativeDocumentMoniker": "core\\IRepositories\\IExamRepository.cs",
               "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamRepository.cs",
               "RelativeToolTip": "core\\IRepositories\\IExamRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:21:07.906Z",
+              "WhenOpened": "2025-05-22T16:53:02.306Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExamService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
+              "RelativeDocumentMoniker": "service\\ExamService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamService.cs",
+              "RelativeToolTip": "service\\ExamService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:28:03.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IExamService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamService.cs",
+              "RelativeDocumentMoniker": "core\\IServices\\IExamService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamService.cs",
+              "RelativeToolTip": "core\\IServices\\IExamService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:54:16.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\ExamRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\ExamRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:46:33.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "api\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAmwIcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:27:16.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExamUploadDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamUploadDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\ExamUploadDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamUploadDto.cs",
+              "RelativeToolTip": "core\\DTOs\\ExamUploadDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:17:27.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ChatService.cs",
+              "RelativeDocumentMoniker": "service\\ChatService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ChatService.cs",
+              "RelativeToolTip": "service\\ChatService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:02:51.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChatRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ChatRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\ChatRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ChatRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\ChatRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:01:29.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ExamUploadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\ExamUploadRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ExamUploadRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\ExamUploadRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAADwv1cAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:57:19.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ExamResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamResultDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\ExamResultDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamResultDto.cs",
+              "RelativeToolTip": "core\\DTOs\\ExamResultDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:42:17.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExamDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\ExamDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ExamDto.cs",
+              "RelativeToolTip": "core\\DTOs\\ExamDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:51:01.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IExamUploadService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
+              "RelativeDocumentMoniker": "core\\IServices\\IExamUploadService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IExamUploadService.cs",
+              "RelativeToolTip": "core\\IServices\\IExamUploadService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:11:48.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ExamUploadService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
+              "RelativeDocumentMoniker": "service\\ExamUploadService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\ExamUploadService.cs",
+              "RelativeToolTip": "service\\ExamUploadService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwCsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:50:32.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "dbo.ExamsUploads.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ExamsUploads.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ExamsUploads.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-23T01:19:26.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ChatMessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ChatMessageRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\ChatMessageRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\ChatMessageRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\ChatMessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:13:38.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
+              "RelativeDocumentMoniker": "data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\DataContext.cs",
+              "RelativeToolTip": "data\\DataContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wBwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:37:37.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AssistantController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\AssistantController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\AssistantController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\AssistantController.cs",
+              "RelativeToolTip": "api\\Controllers\\AssistantController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:06:45.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "core\\Models\\ChatMessage.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\ChatMessage.cs",
+              "RelativeToolTip": "core\\Models\\ChatMessage.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:20:27.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IChatService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IChatService.cs",
+              "RelativeDocumentMoniker": "core\\IServices\\IChatService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IChatService.cs",
+              "RelativeToolTip": "core\\IServices\\IChatService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:49:05.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IChatRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IChatRepository.cs",
+              "RelativeDocumentMoniker": "core\\IRepositories\\IChatRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IChatRepository.cs",
+              "RelativeToolTip": "core\\IRepositories\\IChatRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:58:25.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IChatMessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IChatMessageRepository.cs",
+              "RelativeDocumentMoniker": "core\\IRepositories\\IChatMessageRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IChatMessageRepository.cs",
+              "RelativeToolTip": "core\\IRepositories\\IChatMessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:12:26.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ChatMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ChatMessageDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\ChatMessageDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ChatMessageDto.cs",
+              "RelativeToolTip": "core\\DTOs\\ChatMessageDto.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:01:13.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateChatMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\CreateChatMessageDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\CreateChatMessageDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\CreateChatMessageDto.cs",
+              "RelativeToolTip": "core\\DTOs\\CreateChatMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:17:48.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AssistantRequest.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\AssistantRequest.cs",
+              "RelativeDocumentMoniker": "core\\Models\\AssistantRequest.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\AssistantRequest.cs",
+              "RelativeToolTip": "core\\Models\\AssistantRequest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T19:32:02.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\UserService.cs",
+              "RelativeDocumentMoniker": "service\\UserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\service\\UserService.cs",
+              "RelativeToolTip": "service\\UserService.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAcwMAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:31:06.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "data\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "data\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAzwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:53:30.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
+              "RelativeDocumentMoniker": "core\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\User.cs",
+              "RelativeToolTip": "core\\Models\\User.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA5wBwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:55:58.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "core\\Models\\Question.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\Models\\Question.cs",
+              "RelativeToolTip": "core\\Models\\Question.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAzwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:55:33.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IExamUploadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamUploadRepository.cs",
+              "RelativeDocumentMoniker": "core\\IRepositories\\IExamUploadRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IExamUploadRepository.cs",
+              "RelativeToolTip": "core\\IRepositories\\IExamUploadRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:53:14.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "core\\IServices\\IUserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IServices\\IUserService.cs",
+              "RelativeToolTip": "core\\IServices\\IUserService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:58:14.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "core\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:51:46.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "QuestionDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\QuestionDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\QuestionDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\QuestionDto.cs",
+              "RelativeToolTip": "core\\DTOs\\QuestionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:51:31.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "core\\IRepositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\IRepositories\\IUserRepository.cs",
+              "RelativeToolTip": "core\\IRepositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:58:45.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ManagerDto.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ManagerDto.cs",
+              "RelativeDocumentMoniker": "core\\DTOs\\ManagerDto.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\core\\DTOs\\ManagerDto.cs",
+              "RelativeToolTip": "core\\DTOs\\ManagerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:51:27.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "api\\Models\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\RegisterModel.cs",
+              "RelativeToolTip": "api\\Models\\RegisterModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:46:19.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "api\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Models\\LoginModel.cs",
+              "RelativeToolTip": "api\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:46:03.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "JwtExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\JwtExtensions.cs",
+              "RelativeDocumentMoniker": "api\\Extensions\\JwtExtensions.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\JwtExtensions.cs",
+              "RelativeToolTip": "api\\Extensions\\JwtExtensions.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:16:02.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Program.cs",
+              "RelativeDocumentMoniker": "api\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Program.cs",
+              "RelativeToolTip": "api\\Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:13:12.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "api\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAwwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:18:06.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "api\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "api\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:37:19.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SwaggerExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\SwaggerExtensions.cs",
+              "RelativeDocumentMoniker": "api\\Extensions\\SwaggerExtensions.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\Extensions\\SwaggerExtensions.cs",
+              "RelativeToolTip": "api\\Extensions\\SwaggerExtensions.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvyUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:12:09.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "data.csproj",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\data.csproj",
+              "RelativeDocumentMoniker": "data\\data.csproj",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\data.csproj",
+              "RelativeToolTip": "data\\data.csproj",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-21T20:04:48.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "dbo.ChatMessages.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ChatMessages.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AutoGrade/True/SqlTable/dbo.ChatMessages.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-21T18:21:59.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "20250521182042_AddChatMessageTable.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Migrations\\20250521182042_AddChatMessageTable.cs",
+              "RelativeDocumentMoniker": "data\\Migrations\\20250521182042_AddChatMessageTable.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\data\\Migrations\\20250521182042_AddChatMessageTable.cs",
+              "RelativeToolTip": "data\\Migrations\\20250521182042_AddChatMessageTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T18:20:42.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\appsettings.json",
+              "RelativeDocumentMoniker": "api\\appsettings.json",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\AutoGrade\\server\\api\\appsettings.json",
+              "RelativeToolTip": "api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-21T00:14:06.792Z"
             }
           ]
         }

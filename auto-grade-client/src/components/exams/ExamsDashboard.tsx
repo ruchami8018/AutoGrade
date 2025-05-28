@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Container, Button, Typography, Box, Card, CardContent, CardActions } from '@mui/material';
+import { Container, Button, Typography, Box, Card, CardContent, CardActions, IconButton, Tooltip } from '@mui/material';
 import { UserContext } from '../../store/UserStore';
 import { ExamsContext } from '../../store/ExamsStore';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,8 @@ import axios from 'axios';
 import { Exam } from '../../models/Exam';
 import DeleteExam from './DeleteExam';
 import { fetchExamsByUser } from '../../services/examService';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import DownloadIcon from '@mui/icons-material/Download';
 
 
 const ExamsDashboard = () => {
@@ -16,8 +18,47 @@ const ExamsDashboard = () => {
   const [examToDelete, setExamToDelete] = useState<number | null>(null);
 
   const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string>("");
-    const [exams, setExams] = useState<Exam[]>([]);
+  const [error, setError] = useState<string>("");
+  const [exams, setExams] = useState<Exam[]>([]);
+  
+  // פונקציה לצפייה בקובץ המבחן
+  const viewExamFile = (exam: Exam) => {
+    if (exam.exampleExamPath) {
+      window.open(exam.exampleExamPath, '_blank');
+    } else {
+      alert('אין קובץ מבחן זמין לצפייה');
+    }
+  };
+  
+  // פונקציה להורדת קובץ המבחן
+  const downloadExamFile = (exam: Exam) => {
+    if (exam.exampleExamPath) {
+      // יצירת אלמנט a זמני להורדת הקובץ
+      const link = document.createElement('a');
+      link.href = exam.exampleExamPath;
+      link.download = `${exam.title}.${getFileExtension(exam.contentType)}`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      alert('אין קובץ מבחן זמין להורדה');
+    }
+  };
+  
+  // פונקציה עזר לקבלת סיומת הקובץ מסוג התוכן
+  const getFileExtension = (contentType: string): string => {
+    const extensionMap: {[key: string]: string} = {
+      'application/pdf': 'pdf',
+      'application/msword': 'doc',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
+      'application/vnd.ms-excel': 'xls',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
+      'image/jpeg': 'jpg',
+      'image/png': 'png'
+    };
+    
+    return extensionMap[contentType] || 'pdf'; // ברירת מחדל היא pdf אם הסוג לא מוכר
+  };
 
   // useEffect(() => {
   //   const fetchExams = async () => {
@@ -183,6 +224,30 @@ const ExamsDashboard = () => {
                     >
                       מחק
                     </Button>
+                    
+                    {/* כפתור עין לצפייה בקובץ */}
+                    <Tooltip title="צפה בקובץ המבחן">
+                      <IconButton 
+                        size="small" 
+                        color="primary" 
+                        onClick={() => viewExamFile(exam)}
+                        disabled={!exam.exampleExamPath}
+                      >
+                        <VisibilityIcon />
+                      </IconButton>
+                    </Tooltip>
+                    
+                    {/* כפתור הורדה */}
+                    <Tooltip title="הורד את קובץ המבחן">
+                      <IconButton 
+                        size="small" 
+                        color="primary" 
+                        onClick={() => downloadExamFile(exam)}
+                        disabled={!exam.exampleExamPath}
+                      >
+                        <DownloadIcon />
+                      </IconButton>
+                    </Tooltip>
                   </CardActions>
                 </Card>
               ))}
@@ -207,6 +272,7 @@ const ExamsDashboard = () => {
 };
 
 export default ExamsDashboard;
+
 
 
 

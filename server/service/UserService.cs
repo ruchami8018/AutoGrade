@@ -174,6 +174,14 @@ namespace service
 
             await _userRepository.UpdateUserAsync(user);
         }
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            return await _userRepository.GetUserByIdAsync(id);
+        }
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            return await _userRepository.GetAllUsersAsync();
+        }   
 
         //public async Task<User> LoginAsync(string email, string password)
         //{

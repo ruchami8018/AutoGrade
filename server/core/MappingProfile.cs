@@ -22,6 +22,7 @@ namespace core
             CreateMap<Manager, ManagerDto>().ReverseMap();
             CreateMap<ExamPost, Exam>();
 
+
         }
     }
 }

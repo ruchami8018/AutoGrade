@@ -1,11 +1,15 @@
-﻿using core.IRepositories;
+﻿using core.DTOs;
+using core.IRepositories;
 using core.IServices;
 using core.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static service.ExamService;
 
 namespace service
 {
@@ -18,7 +22,7 @@ namespace service
             _examRepository = examRepository;
         }
 
-        public async Task<bool> AddExamAsync(Exam newexam)
+        public async Task<Exam> AddExamAsync(Exam newexam)
         {
             return await _examRepository.AddExamAsync(newexam);
         }
@@ -43,6 +47,34 @@ namespace service
             return await _examRepository.DeleteExamAsync(id);
         }
 
+        public async Task ProcessStudentExamsAsync(List<IFormFile> files, int examId)
+        {
+
+
+            var exam = await _examRepository.GetByIdAsync(examId);
+            if (exam == null)
+            {
+                throw new Exception("Exam not found");
+            }
+            foreach (var file in files)
+            {
+                var upload = new ExamUpload
+                {
+                    //FileName = file.FileName,
+                    FilePath = Path.Combine("uploads", file.FileName),
+                    ExamId = examId
+                };
+                // Save the file to the server or process it as needed
+                using (var stream = new FileStream(upload.FilePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                // Add the upload to the exam's uploads
+                exam.ExamUploads.Add(upload);
+            }
+            await _examRepository.UpdateExamAsync(exam);
+
+        }
     }
 }
 

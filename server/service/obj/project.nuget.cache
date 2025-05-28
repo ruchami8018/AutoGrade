@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kyBYPogo1FM=",
+  "dgSpecHash": "4Zr5pUan99c=",
   "success": true,
   "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\AutoGrade\\server\\service\\service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\awssdk.core\\4.0.0.5\\awssdk.core.4.0.0.5.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\awssdk.s3\\4.0.0.7\\awssdk.s3.4.0.0.7.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",

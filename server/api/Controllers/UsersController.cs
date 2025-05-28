@@ -15,44 +15,6 @@ namespace api.Controllers
     [ApiController]
     public class UsersController : ControllerBase  
     {
-        //public readonly IUserService _userService;
-        //public UsersController(IUserService userService)
-        //{
-        //    this._userService = userService;
-        //}
-        //// GET: api/<UsersController>
-        //[HttpGet]
-        //public IEnumerable<User> Get()
-        //{
-        //    return this._userService.GetAllUsers();
-        //}
-
-        //// GET api/<UsersController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //// POST api/<UsersController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //// PUT api/<UsersController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-
-        //// DELETE api/<UsersController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
-
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
@@ -61,7 +23,6 @@ namespace api.Controllers
             _userService = userService;
             _mapper = mapper;
         }
-
         //[HttpPost("register")]
         //public async Task<IActionResult> Register([FromBody] RegisterModel model)
         //{
@@ -112,7 +73,6 @@ namespace api.Controllers
                 return Unauthorized("Invalid credentials");
 
             }
-
             var token = _userService.GenerateJwtToken(user);
             var userDto = _mapper.Map<UserDto>(user);
             return Ok(new { Token = token, User = userDto });
@@ -132,6 +92,25 @@ namespace api.Controllers
             public string? Name { get; set; }
         }
 
+
+        // Get user data by Id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> Get(int id)
+        {
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound("No user with id " + id);
+            }
+            return Ok(_mapper.Map<UserDto>(user));
+        }
+        // Get all users
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            var users = await _userService.GetAllUsersAsync();
+            return Ok(users);
+        }
         //private async Task SendWelcomeEmail(string email, string name)
         //{
         //    var fromAddress = new MailAddress("g@gmail.com", "Your App Name");

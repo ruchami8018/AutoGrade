@@ -1,4 +1,6 @@
-﻿using api.Models;
+﻿using Amazon.S3.Model;
+using Amazon.S3;
+using api.Models;
 using AutoMapper;
 using core.DTOs;
 using core.IServices;
@@ -22,15 +24,15 @@ namespace api.Controllers
             _examUploadService = examUploadService;
             _mapper = mapper;
         }
-
-        [HttpGet("{id}")]
+        
+        [HttpGet("{id}")]//הבאת מבחן בודד מסוים על פי ה ID שלו
         public async Task<ActionResult<ExamDto>> Get(int id)
         {
             var exam = await _examService.GetByIdAsync(id);
             return Ok(_mapper.Map<ExamDto>(exam));
         }
 
-        [HttpGet("user/{userId}")]
+        [HttpGet("user/{userId}")]//הבאת כל המבחנים של משתמש מסוים על פי ה ID שלו
         public async Task<ActionResult<List<ExamDto>>> GetExamsByUserId(int userId)
         {
             var exams = await _examService.GetExamsByUserIdAsync(userId);
@@ -42,7 +44,7 @@ namespace api.Controllers
         }
 
         [HttpPost]//הוספה של מבחן
-        public async Task<ActionResult<bool>> Post([FromBody] ExamPost examPost)
+        public async Task<ActionResult<Exam>> Post([FromBody] ExamPost examPost)
         {
             var exam = _mapper.Map<Exam>(examPost);
             return Ok(await _examService.AddExamAsync(exam));
@@ -64,7 +66,7 @@ namespace api.Controllers
         public async Task<ActionResult<bool>> UpdateExam(int id, [FromBody] ExamDto examUpdate)
         {
             var exam = _mapper.Map<Exam>(examUpdate);
-            exam.Id = id; // וודא שהמזהה מוגדר
+            exam.ExamId = id; // וודא שהמזהה מוגדר
             return Ok(await _examService.UpdateExamAsync(exam));
         }
 
@@ -86,5 +88,7 @@ namespace api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
     }
 }

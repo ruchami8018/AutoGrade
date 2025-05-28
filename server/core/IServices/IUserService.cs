@@ -15,6 +15,8 @@ namespace core.IServices
         Task<User> GetUserByEmailAsync(string email);
         Task AddUserAsync(User user);
         Task UpdateUserAsync(string email, string password, string school, string name);
+        Task<User> GetUserByIdAsync(int id);
+        Task<List<User>> GetAllUsersAsync();
 
     }
 }

@@ -39,6 +39,17 @@ namespace data.Repositories
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
         }
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(user => user.Id == id)
+                ?? throw new Exception("User not found"); ;
+        }
+
+        //קבלת כל היוזרים במערכת
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            return await _context.Users.ToListAsync();
+        }
 
     }
 }

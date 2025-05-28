@@ -35,6 +35,10 @@ namespace api.Extensions
             //options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             //services.AddAutoMapper(typeof(MappingProfile));
             //services.AddDbContext<DataContext>();
+
+            // api/Startup.cs (הוספה למתודה ConfigureServices)
+            services.AddScoped<IChatRepository, ChatRepository>();
+            services.AddScoped<IChatService, ChatService>();
         }
 
     }

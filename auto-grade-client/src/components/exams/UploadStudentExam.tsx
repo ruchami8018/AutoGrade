@@ -1,93 +1,209 @@
+// // import React, { useState } from 'react';
+// // import axios from 'axios';
+// // import jsPDF from 'jspdf';
 // import React, { useState } from 'react';
-// import { bulkUploadExams } from '../../services/examService'; // ייבוא הפונקציה משירות
-// import { useNavigate, useParams } from 'react-router-dom';
-
-// interface FileWithStudentName {
-//     file: File | null;
-//     studentName: string;
+// import axios from 'axios';
+// import jsPDF from 'jspdf';
+// import 'jspdf-autotable';  // חשוב שזה יהיה אחרי היבוא של jsPDF
+// interface FileWithStudent {
+//   name: string;
+//   email: string;
+//   file: File;
+//   fileUrl?: string;
 // }
 
-// const UploadStudentExam: React.FC = () => {
-//     const { examId: examIdParam } = useParams(); // חילוץ הפרמטר examId מהנתיב
-//     const examId = examIdParam ? parseInt(examIdParam, 10) : null; // המרה למספר
-//     const [filesWithNames, setFilesWithNames] = useState<FileWithStudentName[]>([{ file: null, studentName: '' }]);
-//     const [uploading, setUploading] = useState(false);
-//     const [error, setError] = useState<string | null>(null);
-//     const [successMessage, setSuccessMessage] = useState<string | null>(null);
-//     const navigate = useNavigate();
+// interface StudentResult {
+//   name: string;
+//   email: string;
+//   grade: number;
+//   feedback: string;
+// }
 
-//     // ... (שאר הקוד של הקומפוננטה: handleFileChange, handleNameChange, addFileInput, removeFileInput)
+// const UploadStudentExam: React.FC<{ examId: number }> = ({ examId }) => {
+//   const [selectedFiles, setSelectedFiles] = useState<FileWithStudent[]>([]);
+//   const [results, setResults] = useState<StudentResult[]>([]);
+//   const [loading, setLoading] = useState(false);
 
-//     const handleBulkUpload = async () => {
-//         setUploading(true);
-//         setError(null);
-//         setSuccessMessage(null);
+//   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     const files = e.target.files;
+//     if (!files) return;
 
-//         if (examId === null) {
-//             setError('מזהה מבחן לא תקין.');
-//             setUploading(false);
-//             return;
-//         }
+//     const newFiles: FileWithStudent[] = Array.from(files).map(file => {
+//       const [name, email] = file.name.split('_');
+//       return { name, email, file };
+//     });
 
-//         try {
-//             await bulkUploadExams(examId, filesWithNames.filter(fwn => fwn.file && fwn.studentName));
-//             setSuccessMessage('הקבצים הועלו בהצלחה!');
-//             setFilesWithNames([{ file: null, studentName: '' }]);
-//             navigate(`/exams/${examId}`);
-//         } catch (err: any) {
-//             setError(`שגיאה בהעלאת הקבצים: ${err.message}`);
-//             console.error('שגיאה בהעלאת קבצים:', err);
-//         } finally {
-//             setUploading(false);
-//         }
-//     };
+//     setSelectedFiles(newFiles);
+//   };
 
-//     const handleClose = () => {
-//         if (examId !== null) {
-//             navigate(`/exams/${examId}`);
-//         } else {
-//             // טפל במקרה שבו אין examId תקין
-//             console.error("מזהה מבחן לא זמין לסגירה.");
-//             // אולי תרצה לנווט למקום אחר או להציג הודעה
-//         }
-//     };
+//   const uploadFileToS3 = async (file: File): Promise<string> => {
+//     const res = await axios.get('/api/files/get-presigned-url', {
+//       params: { fileName: file.name, fileType: file.type }
+//     });
+//     const { url, key } = res.data;
 
-//     return (
-//         <div style={{ /* סגנון */ }}>
-//             <h2>oooooo</h2>
+//     await axios.put(url, file, {
+//       headers: { 'Content-Type': file.type }
+//     });
 
-//             <h3>העלאה מרובה של פתרונות</h3>
-//             {/* ... (שאר התצוגה) */}
-//             <button onClick={handleBulkUpload} disabled={uploading || filesWithNames.some(fwn => !fwn.file || !fwn.studentName)}>
-//                 {uploading ? 'מעלה...' : 'העלה את כל הקבצים'}
-//             </button>
-//             <button onClick={handleClose}>סגור</button>
-//         </div>
+//     return `https://YOUR_BUCKET.s3.amazonaws.com/${key}`;
+//   };
+
+//   const processStudentExams = async (students: { name: string; email: string; fileUrl: string }[]) => {
+//     const response = await axios.post(`/api/exams/process-student-exams/${examId}`, {
+//       students
+//     });
+//     return response.data as StudentResult[];
+//   };
+
+//   const handleUploadAndCheck = async () => {
+//     setLoading(true);
+//     const studentsWithUrls: FileWithStudent[] = [];
+
+//     for (const s of selectedFiles) {
+//       const url = await uploadFileToS3(s.file);
+//       studentsWithUrls.push({ ...s, fileUrl: url });
+//     }
+
+//     const response = await processStudentExams(
+//       studentsWithUrls.map(s => ({
+//         name: s.name,
+//         email: s.email,
+//         fileUrl: s.fileUrl!
+//       }))
 //     );
+
+//     setResults(response);
+//     setLoading(false);
+//   };
+
+// //   const exportResultsToPdf = () => {
+// //     const doc = new jsPDF();
+// //     doc.text('דו"ח תוצאות מבחן', 14, 20);
+// //     doc.autoTable({
+// //       startY: 30,
+// //       head: [['שם', 'מייל', 'ציון', 'משוב']],
+// //       body: results.map(r => [r.name, r.email, r.grade.toString(), r.feedback])
+// //     });
+// //     doc.save('exam-results.pdf');
+// //   };
+// const exportResultsToPdf = () => {
+//     const doc = new jsPDF();
+//     doc.text('דו"ח תוצאות מבחן', 14, 20);
+    
+//     // @ts-ignore - להתעלם משגיאת TypeScript אם יש
+//     doc.autoTable({
+//       startY: 30,
+//       head: [['שם', 'מייל', 'ציון', 'משוב']],
+//       body: results.map(r => [r.name, r.email, r.grade.toString(), r.feedback])
+//     });
+    
+//     doc.save('exam-results.pdf');
+//   };
+
+//   return (
+//     <div className="p-4">
+//       <h2 className="text-xl mb-2">העלאת מבחני תלמידים</h2>
+//       <input type="file" multiple onChange={handleFileChange} className="mb-4" />
+//       <button onClick={handleUploadAndCheck} disabled={loading} className="bg-blue-500 text-white px-4 py-2 rounded">
+//         {loading ? 'טוען...' : 'העלאת המבחנים ובדיקתם'}
+//       </button>
+
+//       {results.length > 0 && (
+//         <div className="mt-6">
+//           <h3 className="text-lg mb-2">תוצאות:</h3>
+//           <table className="w-full border">
+//             <thead>
+//               <tr className="bg-gray-200">
+//                 <th className="p-2 border">שם</th>
+//                 <th className="p-2 border">מייל</th>
+//                 <th className="p-2 border">ציון</th>
+//                 <th className="p-2 border">משוב</th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               {results.map((r, i) => (
+//                 <tr key={i}>
+//                   <td className="p-2 border">{r.name}</td>
+//                   <td className="p-2 border">{r.email}</td>
+//                   <td className="p-2 border">{r.grade}</td>
+//                   <td className="p-2 border">{r.feedback}</td>
+//                 </tr>
+//               ))}
+//             </tbody>
+//           </table>
+//           <button onClick={exportResultsToPdf} className="mt-4 bg-green-500 text-white px-4 py-2 rounded">
+//             הורד PDF
+//           </button>
+//         </div>
+//       )}
+//     </div>
+//   );
 // };
 
 // export default UploadStudentExam;
-import React, { useState } from 'react';
+
+
+
+import React, { useContext, useState } from 'react';
 import { bulkUploadExams } from '../../services/examService';
 import { useNavigate, useParams } from 'react-router-dom';
+import { UserContext } from '../../store/UserStore';
+import { ExamUpload } from '../../models/ExamUpload';
 
 interface FileWithStudentName {
-    file: File | null;
+    file: ExamUpload | null;
+    originalFile: File | null; // שמירת אובייקט ה-File המקורי לצורך העלאה
     studentName: string;
 }
 
 const UploadStudentExam: React.FC = () => {
     const { examId: examIdParam } = useParams();
     const examId = examIdParam ? parseInt(examIdParam, 10) : null;
-    const [filesWithNames, setFilesWithNames] = useState<FileWithStudentName[]>([{ file: null, studentName: '' }]);
+    const [filesWithNames, setFilesWithNames] = useState<FileWithStudentName[]>([{ file: null, originalFile: null, studentName: '' }]);//מערך
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [successMessage, setSuccessMessage] = useState<string | null>(null);
     const navigate = useNavigate();
+    const { currentUser } = useContext(UserContext);
+    const userId = currentUser.id;
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
         const newFilesWithNames = [...filesWithNames];
-        newFilesWithNames[index] = { ...newFilesWithNames[index], file: event.target.files?.[0] || null };
+        const selectedFile = event.target.files?.[0] || null;
+        
+        if (selectedFile) {
+            // יצירת אובייקט ExamUpload מהקובץ שנבחר
+            const examUpload: ExamUpload = {
+                id: 0, // יוגדר על ידי השרת
+                submissionNumber: 0, // יוגדר על ידי השרת
+                userId: userId,
+                examId: examId || 0,
+                studentName: newFilesWithNames[index].studentName,
+                filePath: selectedFile.name, // שם הקובץ כנתיב זמני
+                uploadDate: new Date().toISOString(),
+                score: 0,
+                contentType: selectedFile.type,
+                // שדות נוספים כדי לתמוך בפונקציונליות דומה ל-File
+                name: selectedFile.name,
+                type: selectedFile.type,
+                size: selectedFile.size
+            };
+            
+            // שמירת גם ה-File המקורי וגם ה-ExamUpload
+            newFilesWithNames[index] = { 
+                ...newFilesWithNames[index], 
+                file: examUpload,
+                originalFile: selectedFile 
+            };
+        } else {
+            newFilesWithNames[index] = { 
+                ...newFilesWithNames[index], 
+                file: null,
+                originalFile: null 
+            };
+        }
+        
         setFilesWithNames(newFilesWithNames);
     };
 
@@ -98,42 +214,102 @@ const UploadStudentExam: React.FC = () => {
     };
 
     const addFileInput = () => {
-        setFilesWithNames([...filesWithNames, { file: null, studentName: '' }]);
+        setFilesWithNames([...filesWithNames, { file: null, originalFile: null, studentName: '' }]);
     };
 
-    const removeFileInput = (index: number) => {
+    const removeFileInput = (index: number) => {//צריל לעשות הסרה אמיתית מ S3?
         if (filesWithNames.length > 1) {
             const newFilesWithNames = filesWithNames.filter((_, i) => i !== index);
             setFilesWithNames(newFilesWithNames);
         }
     };
 
-    const handleBulkUpload = async () => {
-        setUploading(true);
-        setError(null);
-        setSuccessMessage(null);
+    // const handleBulkUpload = async () => {
+    //     setUploading(true);
+    //     setError(null);
+    //     setSuccessMessage(null);
 
-        if (examId === null) {
-            setError('מזהה מבחן לא תקין.');
-            setUploading(false);
-            return;
-        }
+    //     if (examId === null) {
+    //         setError('מזהה מבחן לא תקין.');
+    //         setUploading(false);
+    //         return;
+    //     }
 
-        console.log('handleBulkUpload נקרא עם examId:', examId);
-        console.log('נתונים לפני שליחה:', filesWithNames.filter(fwn => fwn.file && fwn.studentName));
+    //     console.log('handleBulkUpload נקרא עם examId:', examId);
+    //     console.log('נתונים לפני שליחה:', filesWithNames.filter(fwn => fwn.file && fwn.studentName));
 
-        try {
-            await bulkUploadExams(examId, filesWithNames.filter(fwn => fwn.file && fwn.studentName));
-            setSuccessMessage('הקבצים הועלו בהצלחה!');
-            setFilesWithNames([{ file: null, studentName: '' }]); // איפוס הטופס לאחר העלאה מוצלחת
-            navigate(`/exams/${examId}`);
-        } catch (err: any) {
-            setError(`שגיאה בהעלאת הקבצים: ${err.message}`);
-            console.error('שגיאה בהעלאת קבצים:', err);
-        } finally {
-            setUploading(false);
-        }
-    };
+    //     try {
+    //         await bulkUploadExams(examId, filesWithNames.filter(fwn => fwn.file && fwn.studentName));
+    //         setSuccessMessage('הקבצים הועלו בהצלחה!');
+    //         setFilesWithNames([{ file: null, studentName: '' }]); // איפוס הטופס לאחר העלאה מוצלחת
+    //         navigate(`/exams/${examId}`);
+    //     } catch (err: any) {
+    //         setError(`שגיאה בהעלאת הקבצים: ${err.message}`);
+    //         console.error('שגיאה בהעלאת קבצים:', err);
+    //     } finally {
+    //         setUploading(false);
+    //     }
+    // };
+
+// נניח שאתה מנהל את המצב של הקבצים והשמות כך:
+interface FileWithName {
+    file: ExamUpload | null;
+    originalFile: File | null; // שמירת אובייקט ה-File המקורי לצורך העלאה
+    studentName: string;
+}
+
+// ... בתוך קומפוננטת ה-React שלך, למשל:
+// const [selectedFiles, setSelectedFiles] = useState<FileWithName[]>([]);
+// const [currentExamId, setCurrentExamId] = useState<number | undefined>(undefined);
+// const currentUserId = 1; // החלף ב-userId האמיתי של המשתמש המחובר
+
+const handleBulkUpload = async () => {
+    // הפעלת מצב טעינה
+    setUploading(true);
+    setError(null);
+    setSuccessMessage(null);
+    
+    // 1. ודא ש-examId תקין
+    if (examId === null) {
+        setError('מזהה מבחן לא תקין.');
+        setUploading(false);
+        return;
+    }
+
+    // 2. ודא ש-filesWithNames הוא מערך ואינו ריק
+    if (!Array.isArray(filesWithNames) || filesWithNames.length === 0) {
+        setError('לא נבחרו קבצים להעלאה.');
+        setUploading(false);
+        return;
+    }
+
+    // 3. בדיקה שיש לפחות קובץ אחד תקין עם שם תלמיד
+    const validFiles = filesWithNames.filter(fwn => fwn.originalFile && fwn.studentName);
+    if (validFiles.length === 0) {
+        setError('אין קבצים תקינים להעלאה. ודא שבחרת קבצים והזנת שמות תלמידים.');
+        setUploading(false);
+        return;
+    }
+
+    try {
+        console.log('מתחיל העלאה מרובה של פתרונות עם examId:', examId);
+        console.log('נתונים לפני שליחה:', validFiles);
+
+        // העברת רק הקבצים התקינים לפונקציית העלאה
+        await bulkUploadExams(examId, userId, validFiles);
+
+        setSuccessMessage('הקבצים הועלו בהצלחה!');
+        setFilesWithNames([{ file: null, originalFile: null, studentName: '' }]); // איפוס הטופס לאחר העלאה מוצלחת
+        
+        // ניתן להעיר את השורה הבאה כדי לנווט לדף המבחן לאחר העלאה מוצלחת
+        // navigate(`/exams/${examId}`);
+    } catch (err: any) {
+        setError(`שגיאה בהעלאת הקבצים: ${err.message || 'שגיאה לא ידועה'}`);
+        console.error('שגיאה בהעלאת קבצים:', err);
+    } finally {
+        setUploading(false);
+    }
+};
 
     const handleClose = () => {
         if (examId !== null) {
@@ -180,7 +356,7 @@ const UploadStudentExam: React.FC = () => {
                     disabled={uploading || filesWithNames.some(fwn => !fwn.file || !fwn.studentName)}
                     style={{ backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', padding: '10px 15px', cursor: 'pointer' }}
                 >
-                    {uploading ? 'מעלה...' : 'העלה את כל הקבצים'}
+                    {uploading ? 'מעלה...' : 'העלאת המבחנים ובדיקתם'}
                 </button>
                 <button onClick={handleClose} style={{ backgroundColor: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', padding: '10px 15px', cursor: 'pointer' }}>
                     סגור

@@ -270,29 +270,50 @@ export const updateExam = async (examId: number, userId: number, subject: string
 
 export const bulkUploadExams = async (
     examId: number,
-    filesWithNames: { file: File | null, studentName: string }[]
+    userId:number,
+    filesWithNames: { file: ExamUpload | null, originalFile: File | null, studentName: string }[]
 ) => {
     try {
-        for (const fileWithName of filesWithNames) {
-            if (fileWithName.file && fileWithName.studentName) {
-                const fileName = fileWithName.file.name;
+        for (let fileWithName of filesWithNames) {
+            if (fileWithName.originalFile && fileWithName.studentName) {
+                // 1. בקשת כתובת URL זמנית מהשרת, כולל Content-Type
                 const presignedUrlResponse = await axios.get(`${UPLOAD_API_URL}/presigned-url`, {
-                    params: { fileName },
+                    params: {
+                        fileName: fileWithName.originalFile.name,
+                        contentType: fileWithName.originalFile.type
+                    }
                 });
-                const presignedUrl = presignedUrlResponse.data.url;
-
-                await axios.put(presignedUrl, fileWithName.file, {
+                
+                // 2. קבלת ה-URL להעלאה והנתיב הציבורי
+                const uploadUrl = presignedUrlResponse.data.uploadUrl;
+                const publicUrl = presignedUrlResponse.data.publicUrl;
+                
+                // 3. העלאת הקובץ המקורי ל-S3 עם Content-Type מתאים
+                await axios.put(uploadUrl, fileWithName.originalFile, {
                     headers: {
-                        'Content-Type': fileWithName.file.type,
+                        'Content-Type': fileWithName.originalFile.type
                     },
                 });
-
-                const fileAccessUrl = presignedUrl.split('?')[0];
-
-                await axios.post(`${UPLOAD_API_URL}/upload-url`, {
-                    examId: examId,
+                
+                // 4. חילוץ ה-URL הבסיסי ללא פרמטרים
+                const fileAccessUrl = uploadUrl.split('?')[0];
+                
+                // הדפסת מידע לבדיקה
+                console.log('נתונים שנשלחים לשרת:', {
+                    examId,
+                    userId,
                     studentName: fileWithName.studentName,
                     fileUrl: fileAccessUrl,
+                    publicUrl
+                });
+                
+                // 5. שליחת המידע על הקובץ שהועלה לשרת
+                // התאמה למבנה ExamUploadDto בשרת
+                await axios.post(`${UPLOAD_API_URL}/upload-url`, {
+                    examId: examId,
+                    userId: userId,
+                    studentName: fileWithName.studentName,
+                    filePath: publicUrl // שינוי מ-fileUrl ל-filePath כפי שהשרת מצפה
                 });
             } else if (fileWithName.file && !fileWithName.studentName) {
                 console.error("שגיאה: אנא הזן שם תלמיד עבור קובץ.", fileWithName.file.name);
@@ -309,6 +330,8 @@ export const bulkUploadExams = async (
         throw error;
     }
 };
+
+
 
 export const deleteExam = async (examId: number) => {
     try {

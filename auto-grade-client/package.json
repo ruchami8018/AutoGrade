@@ -17,6 +17,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.8.4",
     "immutable": "^5.1.1",
+    "jspdf-autotable": "^5.0.2",
     "mobx": "^6.13.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

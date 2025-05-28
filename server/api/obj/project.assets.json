@@ -18,7 +18,7 @@
           }
         }
       },
-      "AWSSDK.Core/4.0.0-preview.12": {
+      "AWSSDK.Core/4.0.0.5": {
         "type": "package",
         "compile": {
           "lib/net8.0/AWSSDK.Core.dll": {
@@ -31,32 +31,29 @@
           }
         }
       },
-      "AWSSDK.Extensions.NETCore.Setup/4.0.0-preview.12": {
+      "AWSSDK.Extensions.NETCore.Setup/3.7.300": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "4.0.0-preview.12",
+          "AWSSDK.Core": "3.7.300",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
         },
         "compile": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb"
           }
         },
         "runtime": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb"
           }
-        },
-        "build": {
-          "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets": {}
         }
       },
-      "AWSSDK.S3/4.0.0-preview.12": {
+      "AWSSDK.S3/4.0.0.7": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.0-preview.12, 5.0.0-preview.12)"
+          "AWSSDK.Core": "[4.0.0.5, 5.0.0)"
         },
         "compile": {
           "lib/net8.0/AWSSDK.S3.dll": {
@@ -2927,6 +2924,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "AWSSDK.S3": "4.0.0.7",
           "DotNetEnv": "3.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.5",
           "Microsoft.EntityFrameworkCore": "8.0.0",
@@ -2980,15 +2978,15 @@
         "lib/net8.0/AutoMapper.xml"
       ]
     },
-    "AWSSDK.Core/4.0.0-preview.12": {
-      "sha512": "PnUdGdbA1rEKf6qTo2GZv2o5h4ubsQHp7Dhb1h2K+S/G0BcsLQ6pYO4Ml+Ovf9xWLVsam/h1fMlhMbSndylbnw==",
+    "AWSSDK.Core/4.0.0.5": {
+      "sha512": "NG31J9azTmY1GKOZd+MFGLUsuD472AGz4BUceTiw0pdYkexD+xJ8kA87hDp/OTk2b6xgrhkQIpnttzIekkMSvw==",
       "type": "package",
-      "path": "awssdk.core/4.0.0-preview.12",
+      "path": "awssdk.core/4.0.0.5",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.4.0.0-preview.12.nupkg.sha512",
+        "awssdk.core.4.0.0.5.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
         "lib/net472/AWSSDK.Core.dll",
@@ -3006,42 +3004,35 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.Extensions.NETCore.Setup/4.0.0-preview.12": {
-      "sha512": "nm0pyGpt5GkhKXcie8gsX6T1ZgXjdlg+2kgSO74j0/+/k3WdirKbxLsggoBjCoxn7GCCrg0r5OaRl/cEUNKmQQ==",
+    "AWSSDK.Extensions.NETCore.Setup/3.7.300": {
+      "sha512": "zMxAHFYSAWHsVV9Cn96nE+V40agRCjT0etF10f0d/nFMMb1z7lecVwNadq9JYyqlDj+jsVRH9ydk4Al4v/1+jg==",
       "type": "package",
-      "path": "awssdk.extensions.netcore.setup/4.0.0-preview.12",
+      "path": "awssdk.extensions.netcore.setup/3.7.300",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ConfigurationSchema.json",
-        "awssdk.extensions.netcore.setup.4.0.0-preview.12.nupkg.sha512",
+        "awssdk.extensions.netcore.setup.3.7.300.nupkg.sha512",
         "awssdk.extensions.netcore.setup.nuspec",
-        "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets",
-        "buildTransitive/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.targets",
-        "buildTransitive/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.targets",
         "images/AWSLogo.png",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.pdb",
-        "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.pdb",
-        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
-        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb",
-        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.xml"
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
       ]
     },
-    "AWSSDK.S3/4.0.0-preview.12": {
-      "sha512": "KdXX9LKKrngDpnI8RfxY9N467KOP6rPwPS4Cktizq9XfPEn5jsE+5Wig79Em3j8lhHO9Q4+fZfvly3qHJx6/Ew==",
+    "AWSSDK.S3/4.0.0.7": {
+      "sha512": "dFELsA+Y7aXmvCTL83+oIWmr+0s/GpkqCKZK1ac7HPdYQFv+QHEAhrXdCJknsCKqK+v0yefkLzuKuSSP6k4tmA==",
       "type": "package",
-      "path": "awssdk.s3/4.0.0-preview.12",
+      "path": "awssdk.s3/4.0.0.7",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.s3.4.0.0-preview.12.nupkg.sha512",
+        "awssdk.s3.4.0.0.7.nupkg.sha512",
         "awssdk.s3.nuspec",
         "images/AWSLogo.png",
         "lib/net472/AWSSDK.S3.dll",
@@ -9123,8 +9114,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "AWSSDK.Extensions.NETCore.Setup >= 4.0.0-preview.12",
-      "AWSSDK.S3 >= 4.0.0-preview.12",
+      "AWSSDK.Extensions.NETCore.Setup >= 3.7.100.1",
+      "AWSSDK.S3 >= 4.0.0.7",
       "AutoMapper >= 14.0.0",
       "DotNetEnv >= 3.1.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.5",
@@ -9200,11 +9191,11 @@
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": {
             "target": "Package",
-            "version": "[4.0.0-preview.12, )"
+            "version": "[3.7.100.1, )"
           },
           "AWSSDK.S3": {
             "target": "Package",
-            "version": "[4.0.0-preview.12, )"
+            "version": "[4.0.0.7, )"
           },
           "AutoMapper": {
             "target": "Package",
@@ -9265,6 +9256,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "api depends on AWSSDK.Extensions.NETCore.Setup (>= 3.7.100.1) but AWSSDK.Extensions.NETCore.Setup 3.7.100.1 was not found. AWSSDK.Extensions.NETCore.Setup 3.7.300 was resolved instead.",
+      "libraryId": "AWSSDK.Extensions.NETCore.Setup",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",

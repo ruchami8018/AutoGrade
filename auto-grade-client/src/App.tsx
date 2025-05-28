@@ -14,6 +14,7 @@ import { initialState } from "./store/UserStore";
 import DeleteExam from './components/exams/DeleteExam'
 import UpdateExam from './components/exams/UpdateExam'
 import UploadStudentExam from './components/exams/UploadStudentExam'
+import TeachersChat from './components/chat/TeachersChat'
 
 const theme = createTheme();
 
@@ -34,7 +35,7 @@ function App() {
             <Route path="/add-exam" element={<AddExam />} />
             {/* <Route path="/update-exam" element={<UpdateExam />} /> */}
             <Route path="/upload-student-exam/:examId" element={<UploadStudentExam />} />
-            
+            <Route path="/teachers-chat" element={<TeachersChat />} />
           </Routes>
         </Router>
       </UserContext.Provider>
