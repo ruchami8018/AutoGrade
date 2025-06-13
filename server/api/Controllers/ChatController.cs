@@ -124,7 +124,7 @@ namespace api.Controllers
                 {
                     return BadRequest("SenderId or content is invalid");
                 }
-
+                //===
                 var message = await _chatService.SaveMessageAsync(model.SenderId, model.Content);
 
                 var user = await _userService.GetUserByIdAsync(model.SenderId);
