@@ -1,3 +1,15 @@
+//using Amazon;
+//using Amazon.S3;
+//using api.Extensions;
+//using core.IRepositories;
+//using core.Models;
+//using data;
+//using data.Repositories;
+//using DotNetEnv;
+//using Microsoft.EntityFrameworkCore;
+//using Microsoft.OpenApi.Models;
+//using service;
+//using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Amazon;
 using Amazon.S3;
 using api.Extensions;
@@ -6,8 +18,10 @@ using core.Models;
 using data;
 using data.Repositories;
 using DotNetEnv;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using service;  
+using service;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,14 +35,19 @@ var accessKey = Env.GetString("AWS_ACCESS_KEY_ID");
 var secretKey = Env.GetString("AWS_SECRET_ACCESS_KEY");
 var bucketName = Env.GetString("AWS_BUCKET_NAME");
 var region = Env.GetString("AWS_REGION");
+var _apiKey = Env.GetString("REACT_APP_OPENAI_API_KEY");
+//var connectionString = Env.GetString("DB_CONNECTION");
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION");
 
 // בדיקה שהערכים לא ריקים
 Console.WriteLine($"AccessKey: {accessKey}");
 Console.WriteLine($"SecretKey: {secretKey}");
 Console.WriteLine($"BucketName: {bucketName}");
 Console.WriteLine($"Region: {region}");
+Console.WriteLine($"ConnectionString: {connectionString}");
 
-if (string.IsNullOrEmpty(accessKey) )
+
+if (string.IsNullOrEmpty(accessKey))
 {
     throw new Exception("המשתנה AWS_ACCESS_KEY_ID לא נטען!");
 }
@@ -53,13 +72,23 @@ builder.Services.AddSingleton(new S3Settings
 
 // Add services to the container.
 //הוספה על פי השעור-התממשקות ל DB
-builder.Services.AddDbContext<DataContext>();
-// הוספת CORS
+
+//builder.Services.AddDbContext<DataContext>(options =>
+//    options.UseMySql(
+//        connectionString,
+//        ServerVersion.AutoDetect(connectionString),
+//        mySqlOptions => mySqlOptions.CommandTimeout(8000)
+//    )
+//);
+
+
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),options => options.CommandTimeout(9000)));
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAnyOrigin",
         builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-              
 });
 
 // הוספת Controllers
@@ -98,7 +127,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AutoGrade API v1"));
-
 }
 
 app.UseCors("AllowAnyOrigin");

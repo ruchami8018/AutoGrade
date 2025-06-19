@@ -16,11 +16,12 @@ namespace data
         public DbSet<ExamUpload> ExamsUploads { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<AiAction> AiActions { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AutoGrade;Trusted_Connection=True;");
         }
+
         //public class AppDbContext : DbContext
         //{
         //    public DbSet<ChatMessage> ChatMessages { get; set; }
