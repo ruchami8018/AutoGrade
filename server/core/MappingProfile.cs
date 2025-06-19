@@ -21,8 +21,7 @@ namespace core
             CreateMap<Question, QuestionDto>().ReverseMap();
             CreateMap<Manager, ManagerDto>().ReverseMap();
             CreateMap<ExamPost, Exam>();
-
-
+            CreateMap<ChatMessage, ChatMessageDto>();
         }
     }
 }

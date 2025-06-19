@@ -9,32 +9,38 @@ using System.Threading.Tasks;
 
 namespace service
 {
+
     public class ChatService : IChatService
     {
         private readonly IChatRepository _chatRepository;
-        private readonly IUserRepository _userRepository;
-
-        public ChatService(IChatRepository chatRepository, IUserRepository userRepository)
+        public ChatService(IChatRepository chatRepository)
         {
             _chatRepository = chatRepository;
-            _userRepository = userRepository;
         }
 
-        public async Task<IEnumerable<ChatMessage>> GetAllMessagesAsync()
+        public async Task<ChatMessage> AddMessageAsync(int topicId, string text, int senderId)//add message to specific topic
         {
-            return await _chatRepository.GetAllMessagesAsync();
+            return await _chatRepository.AddMessageAsync(topicId, text, senderId);
         }
 
-        public async Task<ChatMessage> SaveMessageAsync(int senderId, string content)
+        public Task<ChatTopic> CreateTopicAsync(string title, int userId, string initialMessage)//create new topic
         {
-            var message = new ChatMessage
-            {
-                SenderId = senderId,
-                Content = content,
-                Timestamp = DateTime.Now
-            };
+            return _chatRepository.CreateTopicAsync(title, userId, initialMessage);
+        }
 
-            return await _chatRepository.AddMessageAsync(message);
+        public Task<List<ChatTopic>> GetAllTopicsAsync()//get all topics
+        {
+            return _chatRepository.GetAllTopicsAsync();
+        }
+
+        public Task<List<ChatMessage>> GetMessagesForTopicAsync(int topicId)//get messages for specific topic
+        {
+            return _chatRepository.GetMessagesForTopicAsync(topicId);
+        }
+
+        public Task<ChatTopic?> GetTopicByIdAsync(int id)//get specific topic by id
+        {
+            return _chatRepository.GetTopicByIdAsync(id);
         }
     }
 }

@@ -10,8 +10,12 @@ namespace core.IServices
 {
     public interface IChatService
     {
-        Task<IEnumerable<ChatMessage>> GetAllMessagesAsync();
-        Task<ChatMessage> SaveMessageAsync(int senderId, string content);
+        Task<List<ChatTopic>> GetAllTopicsAsync();
+        Task<ChatTopic?> GetTopicByIdAsync(int id);
+        Task<ChatTopic> CreateTopicAsync(string title, int userId, string initialMessage);
+
+        Task<List<ChatMessage>> GetMessagesForTopicAsync(int topicId);
+        Task<ChatMessage> AddMessageAsync(int topicId, string text, int senderId);
     }
     //public interface IChatService
     //{

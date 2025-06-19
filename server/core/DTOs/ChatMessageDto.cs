@@ -15,15 +15,13 @@ namespace core.DTOs
     //    public DateTime SentAt { get; set; }
     //    public string? FileUrl { get; set; }
     //}
-
     public class ChatMessageDto
     {
-        public Guid Id { get; set; }
-        public Guid SenderId { get; set; }
-        public string Content { get; set; }
-        public string? FileUrl { get; set; }
-        public DateTime SentAt { get; set; }
+        public int Id { get; set; }
+        public string Text { get; set; } = string.Empty;
+        public DateTime SentAt { get; set; } = DateTime.UtcNow;
+
+        public int SenderId { get; set; }
+        public string SenderName { get; set; } = string.Empty;
     }
-
-
 }

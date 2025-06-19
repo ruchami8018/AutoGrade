@@ -16,6 +16,7 @@ namespace data
         public DbSet<ExamUpload> ExamsUploads { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<ChatTopic> ChatTopics { get; set; }
         public DbSet<AiAction> AiActions { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)

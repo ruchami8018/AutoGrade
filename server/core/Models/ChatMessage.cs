@@ -10,15 +10,16 @@ namespace core.Models
     public class ChatMessage
     {
         public int Id { get; set; }
-        public int SenderId { get; set; }
-        public string Content { get; set; }
-        public DateTime Timestamp { get; set; }
 
-        // קשר למשתמש השולח
-        public User Sender { get; set; }
+        public int ChatTopicId { get; set; }
+        public ChatTopic ChatTopic { get; set; } = null!;
+
+        public User Sender { get; set; } = null!; // קשר למשתמש המחבר
+
+        public int SenderId { get; set; } // אם זה כפול ל-UserId – אולי מיותר
+        public string Text { get; set; } = string.Empty;
+        public DateTime SentAt { get; set; } = DateTime.UtcNow;
     }
-
-
     //public class ChatMessage
     //{
     //    public int Id { get; set; }
