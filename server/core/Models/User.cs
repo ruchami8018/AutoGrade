@@ -15,9 +15,8 @@ namespace core.Models
         public string School { get; set; }
         public DateTime created_at { get; set; } = DateTime.Now;
         public string Role { get; set; } = "User";
-        public List<Exam> Exams { get; set; }
-
-
+        //public List<Exam> Exams { get; set; }
+        public UserFile[] files { get; set; } = new UserFile[0];
         public User()
         {
 

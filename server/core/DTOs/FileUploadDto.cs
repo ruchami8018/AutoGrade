@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace core.DTOs
 {
-    public class ExamUploadDto//•	unnecessary 
+    public class FileUploadDto
     {
-        public int? ExamId { get; set; }
-        public int UserId { get; set; } // כדי לשייך את ההעלאה לתלמיד
+        public int FileId { get; set; }
         public string StudentName { get; set; }
         public string FilePath { get; set; }
     }

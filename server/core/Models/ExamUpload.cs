@@ -17,6 +17,15 @@ namespace core.Models
         public DateTime UploadDate { get; set; } = DateTime.UtcNow;//זמן העלאת המבחן הנוכחי
         public int? Score { get; set; }//הציון הסופי של מבחן זה
 
+        //public int Id { get; set; }
+        //public int SubmissionNumber { get; set; }
+        //public int UserId { get; set; }
+        //public int? FileId { get; set; }
+        //public string StudentName { get; set; }
+        //public string FilePath { get; set; }
+        //public DateTime UploadDate { get; set; } = DateTime.UtcNow;
+        //public int Score { get; set; }
+
         public ExamUpload()
         {
 
