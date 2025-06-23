@@ -61,61 +61,29 @@ namespace data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("ChatTopicId")
+                        .HasColumnType("int");
 
                     b.Property<int>("SenderId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Timestamp")
+                    b.Property<DateTime>("SentAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ChatTopicId");
 
                     b.HasIndex("SenderId");
 
                     b.ToTable("ChatMessages");
                 });
 
-            modelBuilder.Entity("core.Models.Exam", b =>
-                {
-                    b.Property<int>("ExamId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ExamId"));
-
-                    b.Property<string>("Class")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("ExampleExamPath")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ExamId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Exams");
-                });
-
-            modelBuilder.Entity("core.Models.ExamUpload", b =>
+            modelBuilder.Entity("core.Models.ChatTopic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -123,14 +91,39 @@ namespace data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ExamId")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("CreatedById")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
+
+                    b.ToTable("ChatTopics");
+                });
+
+            modelBuilder.Entity("core.Models.FileUpload", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("FileId")
                         .HasColumnType("int");
 
                     b.Property<string>("FilePath")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("Score")
+                    b.Property<int>("Score")
                         .HasColumnType("int");
 
                     b.Property<string>("StudentName")
@@ -148,41 +141,7 @@ namespace data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ExamId");
-
-                    b.ToTable("ExamsUploads");
-                });
-
-            modelBuilder.Entity("core.Models.Question", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ExamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuestionNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ExamId");
-
-                    b.ToTable("Questions");
+                    b.ToTable("FilesUploads");
                 });
 
             modelBuilder.Entity("core.Models.User", b =>
@@ -221,52 +180,97 @@ namespace data.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("core.Models.UserFile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Size")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tags")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Files");
+                });
+
             modelBuilder.Entity("core.Models.ChatMessage", b =>
                 {
+                    b.HasOne("core.Models.ChatTopic", "ChatTopic")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatTopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("core.Models.User", "Sender")
                         .WithMany()
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("ChatTopic");
+
                     b.Navigation("Sender");
                 });
 
-            modelBuilder.Entity("core.Models.Exam", b =>
+            modelBuilder.Entity("core.Models.ChatTopic", b =>
+                {
+                    b.HasOne("core.Models.User", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CreatedBy");
+                });
+
+            modelBuilder.Entity("core.Models.UserFile", b =>
                 {
                     b.HasOne("core.Models.User", null)
-                        .WithMany("Exams")
+                        .WithMany("files")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("core.Models.ExamUpload", b =>
+            modelBuilder.Entity("core.Models.ChatTopic", b =>
                 {
-                    b.HasOne("core.Models.Exam", null)
-                        .WithMany("ExamUploads")
-                        .HasForeignKey("ExamId");
-                });
-
-            modelBuilder.Entity("core.Models.Question", b =>
-                {
-                    b.HasOne("core.Models.Exam", null)
-                        .WithMany("Questions")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("core.Models.Exam", b =>
-                {
-                    b.Navigation("ExamUploads");
-
-                    b.Navigation("Questions");
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("core.Models.User", b =>
                 {
-                    b.Navigation("Exams");
+                    b.Navigation("files");
                 });
 #pragma warning restore 612, 618
         }

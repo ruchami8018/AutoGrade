@@ -36,8 +36,8 @@ var secretKey = Env.GetString("AWS_SECRET_ACCESS_KEY");
 var bucketName = Env.GetString("AWS_BUCKET_NAME");
 var region = Env.GetString("AWS_REGION");
 var _apiKey = Env.GetString("REACT_APP_OPENAI_API_KEY");
-//var connectionString = Env.GetString("DB_CONNECTION");
-var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION");
+var connectionString = Env.GetString("DB_CONNECTION");
+//var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION");
 
 // בדיקה שהערכים לא ריקים
 Console.WriteLine($"AccessKey: {accessKey}");
@@ -83,7 +83,7 @@ builder.Services.AddSingleton(new S3Settings
 
 
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),options => options.CommandTimeout(9000)));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),options => options.CommandTimeout(10000)));
 
 builder.Services.AddCors(options =>
 {

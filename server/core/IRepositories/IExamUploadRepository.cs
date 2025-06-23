@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace core.IRepositories
 {
-    public interface IExamUploadRepository
-    {
-        Task<ExamUpload> GetExamUploadByIdAsync(int id);
+    //public interface IExamUploadRepository
+    //{
+    //    Task<ExamUpload> GetExamUploadByIdAsync(int id);
 
-        Task<List<ExamUpload>> GetAllByIdAsync(int id);
+    //    Task<List<ExamUpload>> GetAllByIdAsync(int id);
 
-        Task<bool> AddExamUploadAsync(ExamUpload examUpload);
-        Task<bool> UpdateExamUploadAsync(ExamUpload examUpload);
+    //    Task<bool> AddExamUploadAsync(ExamUpload examUpload);
+    //    Task<bool> UpdateExamUploadAsync(ExamUpload examUpload);
 
-        Task<bool> DeleteExamUploadAsync(int id);
+    //    Task<bool> DeleteExamUploadAsync(int id);
     
 
-    }
+    //}
 }
