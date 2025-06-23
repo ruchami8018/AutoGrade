@@ -12,8 +12,8 @@ using data;
 namespace data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250623100159_NameOfMigration")]
-    partial class NameOfMigration
+    [Migration("20250623222746_NameOf_Migration")]
+    partial class NameOf_Migration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
