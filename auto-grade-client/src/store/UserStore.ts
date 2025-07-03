@@ -1,18 +1,16 @@
-
+//----UNUSED
 import { createContext, useReducer } from "react"
 import { User } from "../models/User"
 import { Action } from "../models/Action";
-import { List } from "immutable";
-
 export const initialState: User = {
     id: 0,
     name: '',
     password: '',
     email: '',
-    school: '',
+    // school: '',
     role: '',
-    exams: List(),
-    isLoggedIn: false
+    exams: [],
+    // isLoggedIn: false
 };
 export const UserContext=createContext<{
     currentUser: User,userDispatch:React.Dispatch<Action>}>
@@ -25,7 +23,7 @@ export const userReducer=(current = initialState,action:Action): User =>{
             return {
                 ...current,
                 ...action.new_data,
-                isLoggedIn: true
+                // isLoggedIn: true
             }
         case 'UPDATE':
             return {

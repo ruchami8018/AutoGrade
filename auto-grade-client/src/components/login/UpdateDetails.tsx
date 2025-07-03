@@ -6,6 +6,8 @@ import CommonModal from "../design/CommonModal";
 
 const Update = ({ onClose }: { onClose: () => void }) => {
 
+    const API_BASE_URL = import.meta.env.VITE_REACT_APP_BASE_API_URL!;
+    const API_UPDATE_URL = `${API_BASE_URL}/api/Users/update`;
     const { currentUser, userDispatch } = useContext(UserContext);
     const nameRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
@@ -14,10 +16,10 @@ const Update = ({ onClose }: { onClose: () => void }) => {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         try {
-            const res = await axios.put('https://localhost:7158/api/Users/update', {//לבדוק את ה URL
+            const res = await axios.put(API_UPDATE_URL, {//לבדוק את ה URL
                 email: currentUser.email,
                 password: passwordRef.current?.value || currentUser.password,
-                school: schoolRef.current?.value || currentUser.school,
+                // school: schoolRef.current?.value || currentUser.school, ---N
                 name: nameRef.current?.value || currentUser.name
             }, {
             });
@@ -28,7 +30,7 @@ const Update = ({ onClose }: { onClose: () => void }) => {
                     name: nameRef.current?.value || currentUser.name,
                     password: passwordRef.current?.value || currentUser.password,
                     email: currentUser.email,
-                    school: schoolRef.current?.value || currentUser.school,
+                    // school: schoolRef.current?.value || currentUser.school, ---N
                     role: currentUser.role,
                     exams: currentUser.exams, // This line was missing a comma in your original code
                 }
@@ -69,7 +71,7 @@ const Update = ({ onClose }: { onClose: () => void }) => {
                     type="text"
                     variant="outlined"
                     fullWidth
-                    defaultValue={currentUser.school}
+                    // defaultValue={currentUser.school}
                 />
                 <Button
                     type="submit"

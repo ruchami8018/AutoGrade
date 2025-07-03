@@ -168,9 +168,6 @@
 //     }
 // };
 
-
-
-
 import axios from "axios";
 import { Exam } from "../models/Exam";
 import { ExamUpload } from "../models/ExamUpload";
