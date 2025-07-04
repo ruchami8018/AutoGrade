@@ -1,8 +1,7 @@
-import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import LoadingButton from '@/components/ui/LoadingButton';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../components/ui/card';
+import { Input } from '../../components/ui/input';
+import { Button } from '../../components/ui/button';
+import LoadingButton from '../../components/ui/LoadingButton';
 
 interface Props {
   title: string;

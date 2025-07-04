@@ -1,9 +1,9 @@
 import React from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
+import { Input } from '../../components/ui/input';
+import { Button } from '../../components/ui/button';
+import { ScrollArea } from '../../components/ui/scroll-area';
 import { Search, PlusCircle } from 'lucide-react';
-import { ForumTopic } from '@/models/Forum';
+import { ForumTopic } from '../../models/Forum';
 import { TopicItem } from './TopicItem';
 
 interface Props {

@@ -1,5 +1,5 @@
-import { Exam } from "./Exam"
-import { List } from "immutable";
+// import { Exam } from "./Exam"
+// import { List } from "immutable";
 
 // export interface User {
 //     id: number,

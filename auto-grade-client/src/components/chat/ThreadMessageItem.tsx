@@ -1,7 +1,7 @@
 import React from 'react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ThreadMessage } from '@/models/Forum';
-import { formatDateTime } from '@/services/chatService';
+import { Avatar, AvatarFallback } from '../../components/ui/avatar';
+import { ThreadMessage } from '../../models/Forum';
+import { formatDateTime } from '../../services/chatService';
 
 export const ThreadMessageItem: React.FC<{ message: ThreadMessage, currentUserId : number }> = ({ message, currentUserId }) => (
   <div className="flex gap-4">

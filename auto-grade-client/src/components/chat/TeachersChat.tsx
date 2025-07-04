@@ -241,7 +241,7 @@
 // };
 // export default TeachersChat;
 
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { 
   Box, Paper, Typography, TextField, Button 
 } from '@mui/material';

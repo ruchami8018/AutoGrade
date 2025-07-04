@@ -1,9 +1,9 @@
 import React from 'react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback } from '../../components/ui/avatar';
+import { Badge } from '../../components/ui/badge';
 import { MessageSquare } from 'lucide-react';
-import { ForumTopic } from '@/models/Forum';
-import { formatDateTime } from '@/services/chatService';
+import { ForumTopic } from '../../models/Forum';
+import { formatDateTime } from '../../services/chatService';
 
 interface Props {
   topic: ForumTopic;

@@ -1,5 +1,5 @@
 // components/AILessonPlanGenerator.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
@@ -86,7 +86,7 @@ const AILessonPlanGenerator = () => {
         </div>
         <div>
           <Label>משך השיעור בדקות</Label>
-          <Slider min={20} max={120} step={5} value={duration} onValueChange={setDuration} />
+          <Slider min={20} max={120} step={5} value={[duration]} onValueChange={([v]) => setDuration(v)} />
           <div>{duration} דקות</div>
         </div>
         <div className="grid grid-cols-2 gap-4">

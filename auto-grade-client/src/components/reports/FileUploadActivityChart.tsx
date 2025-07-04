@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend
+  // Legend
 } from 'recharts';
 
 type DataItem = {
