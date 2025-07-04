@@ -39,7 +39,7 @@
 
 import axios from "axios";
 
-const API_BASE = `${import.meta.env.VITE_REACT_APP_BASE_API_URL!}/chat`;
+const API_BASE = `${import.meta.env.VITE_REACT_APP_BASE_API_URL!}/chat`;//https://smartgrade.onrender.com/api/chat
 
 export const getAllTopics = async () => {
   const res = await axios.get(`${API_BASE}/topics`);

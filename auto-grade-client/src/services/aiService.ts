@@ -1,7 +1,7 @@
 // services/aiService.ts
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_REACT_APP_BASE_API_URL!;
+const API_BASE = import.meta.env.VITE_REACT_APP_BASE_API_URL!;//https://smartgrade.onrender.com/api
 const LESSON_PLAN_API = `${API_BASE}/ai/lesson-plan`;
 const GENERATE_QUESTIONS_API = `${API_BASE}/ai/generate-questions`;
 const SUMMARIZE_TEXT_API = `${API_BASE}/ai/summarize`;
