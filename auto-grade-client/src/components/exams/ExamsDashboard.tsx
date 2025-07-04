@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import { Container, Button, Typography, Box, Card, CardContent, CardActions, IconButton, Tooltip } from '@mui/material';
 import { UserContext } from '../../store/UserStore';
-import { ExamsContext } from '../../store/ExamsStore';
+// import { ExamsContext } from '../../store/ExamsStore';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { Exam } from '../../models/Exam';
 import DeleteExam from './DeleteExam';
 import { fetchExamsByUser } from '../../services/examService';

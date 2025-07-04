@@ -1,6 +1,8 @@
 import React from 'react';
 import { File } from '../../models/File';
-import { FileText, FilePen, Presentation, FileSpreadsheet, File as FileIcon } from 'lucide-react';
+// import { FileText, FilePen, Presentation, FileSpreadsheet, File as FileIcon } from 'lucide-react';
+import { File as FileIcon } from 'lucide-react';
+
 import { fileTypeColors, fileTypeIcons } from './fileGridView';
 
 interface FileListViewProps {
