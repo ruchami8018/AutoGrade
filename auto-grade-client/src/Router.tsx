@@ -9,7 +9,7 @@ import AI from "./pages/AI";
 import Files from "./pages/Files";
 import Landing from "./pages/Landing";
 import Profile from "./pages/Profile";
-import Reports from "./pages/Reports";
+// import Reports from "./pages/Reports";
 import Register from "./components/login/register";
 
 export const router = createBrowserRouter([
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
         { path: '/dashboard', element: <Dashboard /> },
         { path: '/files', element: <Files /> },
         { path: '/chat', element: <Chat /> },
-        { path: '/reports', element: <Reports /> },
+        // { path: '/reports', element: <Reports /> },
         { path: '/profile', element: <Profile /> },
       ]
     }
