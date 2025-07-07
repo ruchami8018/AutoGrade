@@ -4,12 +4,14 @@ import './App.css'
 // import { createTheme } from '@mui/material/styles'
 import { RouterProvider } from 'react-router-dom'
 // import { BrowserRouter as Router, RouterProvider } from 'react-router-dom'
-import { UserContext, userReducer } from './store/UserStore'
-import { initialState } from "./store/UserStore";
+// import { UserContext } from './context/UserReducer'
+// import { initialState } from "./store/UserStore";
 import { router } from './Router'
+import UserReducer, { initialUser, UserContext } from './context/UserReducer'
+
 
 function App() {
-  const [user, userDispatch] = useReducer(userReducer, initialState);
+  const [user, userDispatch] = useReducer(UserReducer, initialUser);
 
   return (
     // <ThemeProvider theme={theme}>
@@ -32,14 +34,13 @@ function App() {
     // </ThemeProvider>
 
     <>
-    <UserContext.Provider value={{ currentUser: user, userDispatch }}>
+    <UserContext.Provider value={{ user, userDispatch }}>
       <RouterProvider router={router} />
     </UserContext.Provider>
     </>
   )
 }
 export default App
-
 
 
 // import React, { useReducer } from 'react';
