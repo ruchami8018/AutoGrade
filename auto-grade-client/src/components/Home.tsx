@@ -28,13 +28,13 @@
 
 
 // import { Button } from '../components/ui/button';
-import { useContext} from 'react';
-import { UserContext } from '../store/UserStore';
+// import { useContext} from 'react';
+// import { UserContext } from '../store/UserStore';
 // import ExamList from './exams/ExamsDashboard';
 // import ExamsDashboard from './exams/ExamsDashboard';
 
 const Home = () => {
-    const { currentUser } = useContext(UserContext);
+    // const { currentUser } = useContext(UserContext);
 
     // return (
     //     <div>

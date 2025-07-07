@@ -11,7 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { summarizeText } from '../../services/aiService';
 const AISummaryGenerator = () => {
   const [textInput, setTextInput] = useState('');
-  const [fileUrl, setFileUrl] = useState('');
+  const [fileUrl] = useState('');
+  // const [fileUrl, setFileUrl] = useState('');
   const [uploadedFileName, setUploadedFileName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [generatedSummary, setGeneratedSummary] = useState('');

@@ -30,7 +30,8 @@ import { analyzeText as analyzeTextAPI } from '../../services/aiService';
 
 const AITextAnalyzer = () => {
   const [textInput, setTextInput] = useState('');
-  const [fileUrl, setFileUrl] = useState('');
+  const [fileUrl] = useState('');
+  // const [fileUrl, setFileUrl] = useState('');
   const [uploadedFileName, setUploadedFileName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [analysisResult, setAnalysisResult] = useState('');

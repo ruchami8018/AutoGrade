@@ -10,7 +10,8 @@ import { Badge } from "../../components/ui/badge";
 import { generateQuestions as generateQuestionsAPI} from "../../services/aiService"; // Adjust the import path as necessary
 const AIQuestionGenerator = () => {
   const [textInput, setTextInput] = useState('');
-  const [fileUrl, setFileUrl] = useState('');
+  const [fileUrl] = useState('');
+  // const [fileUrl, setFileUrl] = useState('');
   const [numQuestions, setNumQuestions] = useState(5);
   const [difficultyLevel, setDifficultyLevel] = useState('medium');
   const [questionType, setQuestionType] = useState('multiple_choice');
