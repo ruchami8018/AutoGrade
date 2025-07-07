@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, ReactNode } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserReducer';
 import {  LayoutDashboard,  Files,  MessageSquare, ChartBar, User as UserIcon, Menu, 
@@ -16,11 +16,11 @@ interface LogoProps {
   }
 // SmartGrade Logo Component
 const Logo = ({ size = "default" }: LogoProps) => {
-  const sizeClasses = {
-    small: "w-8 h-8",
-    default: "w-10 h-10",
-    large: "w-14 h-14"
-  };
+  // const sizeClasses = {
+  //   small: "w-8 h-8",
+  //   default: "w-10 h-10",
+  //   large: "w-14 h-14"
+  // };
  
   return (
 <div className="flex flex-col items-center">
@@ -97,9 +97,9 @@ const mainNavItems = [
 ];
 
 
-interface LayoutProps {
-    children: ReactNode;
-  }
+// interface LayoutProps {
+//     children: ReactNode;
+//   }
   
 export default function Layout() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -114,9 +114,10 @@ export default function Layout() {
       try {
         const userData = user;
         setCurrentUser(userData);
+        setNotifications(notifications);
       } catch (error) {5
         // If no user is logged in and we're not on the landing page, redirect to landing
-        if (location.pathname !== "/") {
+        if (location.pathname !== "/" && currentUser.name != "error") {
           navigate('/');
         }
       }

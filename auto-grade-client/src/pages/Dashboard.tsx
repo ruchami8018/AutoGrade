@@ -7,8 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { Badge } from "../components/ui/badge";
 import KPICard from '../components/reports/KPICard';
 //import { createPageUrl } from '@/utils';
-import { FileText, Upload,  Share2,  Download, Users, Clock, BookOpen, PenTool, Calendar, BarChart2, ChevronRight, Lightbulb} from 'lucide-react';
-
+import { FileText, Upload,  Share2,  Download, Users, Clock, Calendar, BarChart2, ChevronRight, Lightbulb} from 'lucide-react';
+// , BookOpen, PenTool
 function Dashboard() {
   const { user } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(true);
@@ -83,18 +83,18 @@ function Dashboard() {
     });
   };
 
-  const fileTypeIcons = {
-    'exam': <PenTool className="h-4 w-4" />,
-    'lesson_plan': <BookOpen className="h-4 w-4" />,
-    'presentation': <FileText className="h-4 w-4" />,
-    'summary': <FileText className="h-4 w-4" />
-  };
+  // const fileTypeIcons = {
+  //   'exam': <PenTool className="h-4 w-4" />,
+  //   'lesson_plan': <BookOpen className="h-4 w-4" />,
+  //   'presentation': <FileText className="h-4 w-4" />,
+  //   'summary': <FileText className="h-4 w-4" />
+  // };
 
-  const eventTypeColors = {
-    'exam': 'bg-red-100 text-red-800 border-red-200',
-    'meeting': 'bg-blue-100 text-blue-800 border-blue-200',
-    'deadline': 'bg-amber-100 text-amber-800 border-amber-200'
-  };
+  // const eventTypeColors = {
+  //   'exam': 'bg-red-100 text-red-800 border-red-200',
+  //   'meeting': 'bg-blue-100 text-blue-800 border-blue-200',
+  //   'deadline': 'bg-amber-100 text-amber-800 border-amber-200'
+  // };
 
   return (
     

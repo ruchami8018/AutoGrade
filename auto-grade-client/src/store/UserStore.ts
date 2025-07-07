@@ -1,7 +1,23 @@
 //----UNUSED
-import { createContext} from "react"
+import { createContext } from "react"
 import { User } from "../models/User"
 import { Action } from "../models/Action";
+import { List } from "immutable";
+import { Exam } from "../models/Exam";
+const list: List<Exam> = List([{
+    id: 1,
+    userId: 1,
+    subject: "math",
+    title: "title",
+    createdAt: "2025-07-07T12:00:00.000Z",
+    class: 1,
+    questions: [],
+    exampleExamPath: "path",
+    examUploads: [],
+    contentType: "exam"
+}
+]);
+
 export const initialState: User = {
     id: 0,
     name: '',
@@ -9,16 +25,16 @@ export const initialState: User = {
     email: '',
     // school: '',
     role: '',
-    exams: [],
+    exams: list
     // isLoggedIn: false
 };
-export const UserContext=createContext<{
-    currentUser: User,userDispatch:React.Dispatch<Action>}>
-    ({currentUser:initialState,userDispatch:()=>{}});
+export const UserContext = createContext<{
+    currentUser: User, userDispatch: React.Dispatch<Action>
+}>
+    ({ currentUser: initialState, userDispatch: () => { } });
 
-export const userReducer=(current = initialState,action:Action): User =>{
-    switch(action.type)
-    {
+export const userReducer = (current = initialState, action: Action): User => {
+    switch (action.type) {
         case 'CREATE':
             return {
                 ...current,

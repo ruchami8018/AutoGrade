@@ -1,5 +1,6 @@
 import { Dispatch, createContext } from "react";
 import { User } from "../models/User"
+import { List } from "immutable";
 
 type Action = {
     type : 'REGISTER',
@@ -49,7 +50,7 @@ export const initialUser: User = {
     email: '',
     password: '',
     role: '',
-    exams: []
+    exams: List([])
 };
 
 export const UserContext = createContext<{

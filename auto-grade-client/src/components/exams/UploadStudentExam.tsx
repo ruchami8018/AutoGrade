@@ -252,11 +252,11 @@ const UploadStudentExam: React.FC = () => {
     // };
 
 // נניח שאתה מנהל את המצב של הקבצים והשמות כך:
-interface FileWithName {
-    file: ExamUpload | null;
-    originalFile: File | null; // שמירת אובייקט ה-File המקורי לצורך העלאה
-    studentName: string;
-}
+// interface FileWithName {
+//     file: ExamUpload | null;
+//     originalFile: File | null; // שמירת אובייקט ה-File המקורי לצורך העלאה
+//     studentName: string;
+// }
 
 // ... בתוך קומפוננטת ה-React שלך, למשל:
 // const [selectedFiles, setSelectedFiles] = useState<FileWithName[]>([]);

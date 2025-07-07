@@ -1,38 +1,38 @@
-import { useState, useContext, useCallback  } from 'react';
-import {  Search,Plus, FileText, FilePen,
- // FilePresentation,
- Presentation, FileSpreadsheet, File as FileIcon,  Grid3X3, List as ListIcon, Filter, SortDesc} from 'lucide-react';
+import { useState, useCallback  } from 'react';
+import {  Search,Plus, Grid3X3, List as ListIcon, Filter } from 'lucide-react';
+// , FileText, FilePen,
+ // FilePresentation, Presentation, FileSpreadsheet, File as FileIcon,
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem,  DropdownMenuTrigger} from "../components/ui/dropdown-menu";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "../components/ui/dialog";
-import { UserContext } from "../context/UserReducer";
+// import { UserContext } from "../context/UserReducer";
 import AddFile from "../components/files/addFile";
 import { File } from '../models/File'; 
 import FilesList from '../components/files/filesList';
 
   type FileTabType = 'all' | File['type'];
 
-const fileTypeIcons = {
-  'exam': FilePen,
-  'summary': FileText,
-  'presentation': Presentation,
-  'lesson_plan': FileSpreadsheet,
-  'quiz': FilePen,
-  'other': FileIcon
-};
+// const fileTypeIcons = {
+//   'exam': FilePen,
+//   'summary': FileText,
+//   'presentation': Presentation,
+//   'lesson_plan': FileSpreadsheet,
+//   'quiz': FilePen,
+//   'other': FileIcon
+// };
 
-const formatDate = (date : Date) => {
-  return new Date(date).toLocaleDateString('he-IL', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-};
+// const formatDate = (date : Date) => {
+//   return new Date(date).toLocaleDateString('he-IL', {
+//     year: 'numeric',
+//     month: 'long',
+//     day: 'numeric'
+//   });
+// };
 
 export default function Files() {
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'); 
   const [currentTab, setCurrentTab] = useState<FileTabType>('all');
