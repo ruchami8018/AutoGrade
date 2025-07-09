@@ -46,7 +46,7 @@ const Home = () => {
     //         ) : (
     //             <>
     //                 <h1>AUTO GRADE</h1>
-    //                 <h2>YOUR SMART TESTER!!!</h2>
+    //                 <h2>YOUR  TESTER!!!</h2>
     //             </>
     //         )}
     //     </div>

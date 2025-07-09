@@ -12,8 +12,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'), // ככה @ מפנה לתקיית src
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // מעלה את הסף ל-1000KB במקום 500KB ברירת מחדל
+  },
 })
 
+// export default defineConfig({
+//   plugins: [react()],
+//   resolve: {
+//     alias: {
+//       '@': path.resolve(__dirname, 'src'),
+//     },
+//   },
+//   build: {
+//     chunkSizeWarningLimit: 1000, // מעלה את הסף ל-1000KB במקום 500KB ברירת מחדל
+//   },
+// })
 
 
 
