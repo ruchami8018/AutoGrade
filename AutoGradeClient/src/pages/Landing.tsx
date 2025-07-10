@@ -1,7 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { MessageCircle, Brain, FileText, BookOpen, BarChart2, ChevronLeft} from 'lucide-react';
+import { MessageCircle, Brain, FileText, BookOpen, BarChart2, ChevronLeft, Users, CheckCircle, Clock, Quote, Star } from 'lucide-react';
+
+const StatCard = ({ icon: Icon, number, label, suffix = "" }: { icon: React.ElementType, number: number, label: string, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = number;
+    const duration = 4000;
+    const increment = end / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [number]);
+
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all">
+      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <Icon className="w-8 h-8 text-white" />
+      </div>
+      <div className="text-3xl font-bold text-white mb-2">
+        {count.toLocaleString()}{suffix}
+      </div>
+      <div className="text-blue-100">{label}</div>
+    </div>
+  );
+};
 
 type FeatureCardProps = {
   icon: React.ElementType;
@@ -35,7 +70,7 @@ export default function Landing() {
         <div className="flex items-center gap-3">
           <div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            AutoGrade
+              AutoGrade
             </span>
             <p className="text-sm text-gray-600">כל מה שמורה צריך, במקום אחד.</p>
           </div>
@@ -103,12 +138,52 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">המספרים מדברים בעד עצמם</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              הצטרפו לקהילה גדולה של מורים שכבר חוו את הכוח של AutoGrade
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <StatCard
+              icon={Users}
+              number={15000}
+              label="מורים רשומים"
+              suffix="+"
+            />
+            <StatCard
+              icon={FileText}
+              number={250000}
+              label="קבצים עובדו"
+              suffix="+"
+            />
+            <StatCard
+              icon={Clock}
+              number={50000}
+              label="שעות נחסכו"
+              suffix="+"
+            />
+            <StatCard
+              icon={CheckCircle}
+              number={98}
+              label="שביעות רצון"
+              suffix="%"
+            />
+          </div>
+        </div>
+      </section>
+
       <section id="features" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">פיצ'רים מובילים</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AutoGrade מציעה מגוון כלים חכמים שיעזרו לכם לנהל את ההוראה ביעילות ובקלות
+              AutoGrade מציעה מגוון כלים חכמים שיעזרו לכם לנהל את ההוראה ביעילות ובקלות
             </p>
           </div>
 
@@ -141,6 +216,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">מוכנים להתחיל?</h2>
@@ -163,13 +239,13 @@ export default function Landing() {
               <span className="text-md font-bold text-white">SG</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            AutoGrade
+              AutoGrade
             </span>
           </div>
           <p className="text-gray-600 text-center md:text-right">
-            &copy; כל הזכויות שמורות. 
-          2025
-          AutoGrade. 
+            &copy; כל הזכויות שמורות.
+            2025
+            AutoGrade.
           </p>
         </div>
       </footer>
