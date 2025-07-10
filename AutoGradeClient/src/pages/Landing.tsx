@@ -132,7 +132,7 @@ export default function Landing() {
             <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
             {/*5*/}
             <img
-              src="https://my-auto-grade-testpnoren.s3.us-east-1.amazonaws.com/LOGO_AUTO_GRADE_5.png"
+              src="https://my-auto-grade-testpnoren.s3.us-east-1.amazonaws.com/LOGO_AUTO_GRADE_4.png"
               alt="דשבורד AutoGrade"
               className="relative rounded-xl shadow-2xl border-8 border-white"
             />
