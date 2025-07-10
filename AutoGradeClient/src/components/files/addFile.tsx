@@ -182,7 +182,6 @@ const handleTypeChange = (newType: FileType) => {
           className="placeholder-gray-400"
         />
       </div>
-
       <div>
         <label className="text-sm font-medium">תיאור (אופציונלי)</label>
         <Textarea 
@@ -213,5 +212,4 @@ const handleTypeChange = (newType: FileType) => {
     </form>
   );
 };
-
 export default AddFile;

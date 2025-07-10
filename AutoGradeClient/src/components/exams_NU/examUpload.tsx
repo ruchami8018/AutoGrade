@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { getPresignedUrl, uploadExamUrl } from "../../services/examService";
+import { getPresignedUrl, uploadExamUrl } from "../../services/examService_NU";
 import axios from "axios";
 
 interface ExamUploadProps {
     examId: number;
 }
-
 const ExamUpload: React.FC<ExamUploadProps> = ({ examId }) => {
     const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false);
@@ -20,7 +19,6 @@ const ExamUpload: React.FC<ExamUploadProps> = ({ examId }) => {
             setError(null);
         }
     };
-
     const uploadFile = async () => {
         if (!file || !userId || !studentName) {
             setError("נא לבחור קובץ, להזין מזהה משתמש ושם תלמיד");

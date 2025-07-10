@@ -13,6 +13,7 @@ const ModelExamUpLoad = ({ open, onClose, onUploadComplete }: ModelExamUpLoadPro
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const Api_base=import.meta.env.VITE_REACT_APP_BASE_API_URL;
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -46,7 +47,7 @@ const ModelExamUpLoad = ({ open, onClose, onUploadComplete }: ModelExamUpLoadPro
       setUploading(true);
 
       // 1. קבלת URL להעלאה מהשרת
-      const presignedUrlResponse = await axios.get(`https://localhost:7158/api/ExamUpload/presigned-url`, {
+      const presignedUrlResponse = await axios.get(`${Api_base}/ExamUpload/presigned-url`, {
         params: { fileName: file.name }
       });
       
@@ -116,5 +117,4 @@ const ModelExamUpLoad = ({ open, onClose, onUploadComplete }: ModelExamUpLoadPro
     </Dialog>
   );
 };
-
 export default ModelExamUpLoad;

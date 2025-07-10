@@ -26,17 +26,18 @@ const LoginWithGoogle: React.FC = () => {
   };
 
   return (
-    <button
-      onClick={handleLogin}
-      className="flex items-center justify-center w-full px-6 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-100 transition duration-200"
-    >
-      <img
-        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-        alt="Google logo"
-        className="w-5 h-5 ml-4"
-      />
-      <span className="text-gray-700 font-medium">התחברות עם גוגל</span>
-    </button>
+    // <button
+    //   onClick={handleLogin}
+    //   className="flex items-center justify-center w-full px-6 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-100 transition duration-200"
+    // >
+    //   <img
+    //     src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+    //     alt="Google logo"
+    //     className="w-5 h-5 ml-4"
+    //   />
+    //   <span className="text-gray-700 font-medium">התחברות עם גוגל</span>
+    // </button>
+    <></>
   );
 };
 

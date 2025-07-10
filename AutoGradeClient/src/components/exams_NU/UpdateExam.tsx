@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from 'react';
 import { Container, TextField, Button, Box, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import { UserContext } from '../../store/UserStore';
-import { ExamsContext } from '../../store/ExamsStore';
+import { UserContext } from '../../store_NOT_IN_USE/UserStore';
+import { ExamsContext } from '../../store_NOT_IN_USE/ExamsStore_NU';
 import axios from 'axios';
 import { CloudUpload } from '@mui/icons-material';
 
@@ -11,6 +11,7 @@ const UpdateExam = () => {
   const { examId } = useParams<{ examId: string }>();
   const { currentUser } = useContext(UserContext);
   const { dispatch } = useContext(ExamsContext);
+  const Api_base=import.meta.env.VITE_REACT_APP_BASE_API_URL;
   
   const [examData, setExamData] = useState({
     subject: '',
@@ -25,7 +26,7 @@ const UpdateExam = () => {
   useEffect(() => {
     const fetchExam = async () => {
       try {
-        const response = await axios.put(`https://localhost:7158/api/Exam/${examId}`);
+        const response = await axios.put(`${Api_base}/Exam/${examId}`);
         const exam = response.data;
         setExamData({
           subject: exam.subject,
@@ -75,7 +76,7 @@ const UpdateExam = () => {
   const uploadFile = async (fileToUpload: File) => {
     try {
       // 1. קבלת URL להעלאה מהשרת
-      const presignedUrlResponse = await axios.get(`https://localhost:7158/api/ExamUpload/presigned-url`, {
+      const presignedUrlResponse = await axios.get(`${Api_base}/ExamUpload/presigned-url`, {
         params: { fileName: fileToUpload.name }
       });
       
@@ -102,7 +103,7 @@ const UpdateExam = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`https://localhost:7158/api/Exam/${examId}`, {
+      const response = await axios.put(`${Api_base}/Exam/${examId}`, {
         id: examId,
         userId: currentUser.id,
         ...examData
@@ -191,109 +192,3 @@ const UpdateExam = () => {
 };
 
 export default UpdateExam;
-
-
-// =======================FROM GEMINY========
-
-// import React, { useState, useEffect, useContext } from 'react';
-// import { useNavigate, useParams } from 'react-router-dom';
-// import { fetchExamById, updateExam } from '../../services/examService';
-// import { UserContext } from '../../store/UserStore'; // ייבוא הפונקציות משירות המבחנים
-
-// const UpdateExam = () => {
-//     const { examId } = useParams();
-//     const navigate = useNavigate();
-//     const { currentUser } = useContext(UserContext);
-//     const [subject, setSubject] = useState('');
-//     const [title, setTitle] = useState('');
-//     const [classNumber, setClassNumber] = useState<number>(0);
-//     const [exampleExamPath, setExampleExamPath] = useState(''); // הוספת סטייט עבור נתיב קובץ לדוגמה
-
-//     useEffect(() => {
-//         const loadExamDetails = async () => {
-//             if (examId) {
-//                 try {
-//                     const examDetails = await fetchExamById(Number(examId));
-//                     if (examDetails) {
-//                         setSubject(examDetails.subject);
-//                         setTitle(examDetails.title);
-//                         setClassNumber(examDetails.class);
-//                         setExampleExamPath(examDetails.exampleExamPath || ''); // טעינת נתיב קובץ לדוגמה
-//                     }
-//                 } catch (error) {
-//                     alert('שגיאה בטעינת פרטי המבחן.');
-//                     console.error('שגיאה בטעינת פרטי המבחן:', error);
-//                 }
-//             }
-//         };
-
-//         loadExamDetails();
-//     }, [examId]);
-
-//     const handleSubmit = async (event: React.FormEvent) => {
-//         event.preventDefault();
-//         if (examId) {
-//             try {
-//                 if (!currentUser.id) {
-//                     throw new Error('משתמש לא מחובר');
-//                 }
-//                 await updateExam(Number(examId), currentUser.id, subject, title, classNumber, exampleExamPath);
-//                 navigate('/ExamsDashboard');
-//                 alert('המבחן עודכן בהצלחה.');
-//             } catch (error) {
-//                 alert('שגיאה בעדכון המבחן.');
-//                 console.error('שגיאה בעדכון המבחן:', error);
-//             }
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h2>עדכון מבחן</h2>
-//             <form onSubmit={handleSubmit}>
-//                 <div>
-//                     <label htmlFor="subject">נושא:</label>
-//                     <input
-//                         type="text"
-//                         id="subject"
-//                         value={subject}
-//                         onChange={(e) => setSubject(e.target.value)}
-//                     />
-//                 </div>
-//                 <div>
-//                     <label htmlFor="title">כותרת:</label>
-//                     <input
-//                         type="text"
-//                         id="title"
-//                         value={title}
-//                         onChange={(e) => setTitle(e.target.value)}
-//                     />
-//                 </div>
-//                 <div>
-//                     <label htmlFor="classNumber">כיתה:</label>
-//                     <input
-//                         type="number"
-//                         id="classNumber"
-//                         value={classNumber}
-//                         onChange={(e) => setClassNumber(Number(e.target.value))}
-//                     />
-//                 </div>
-//                 <div>
-//                     <label htmlFor="exampleExamPath">נתיב קובץ לדוגמה:</label>
-//                     <input
-//                         type="text"
-//                         id="exampleExamPath"
-//                         value={exampleExamPath}
-//                         onChange={(e) => setExampleExamPath(e.target.value)}
-//                     />
-//                 </div>
-//                 <button type="submit">עדכן מבחן</button>
-//                 <button type="button" onClick={() => navigate('/ExamsDashboard')}>
-//                     ביטול
-//                 </button>
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default UpdateExam;

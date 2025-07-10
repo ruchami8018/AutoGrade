@@ -169,8 +169,8 @@
 // };
 
 import axios from "axios";
-import { Exam } from "../models/Exam";
-import { ExamUpload } from "../models/ExamUpload";
+import { Exam } from "../models/Exam_NOT_IN_USE";
+import { ExamUpload } from "../models/ExamUpload_NOT_IN_USE";
 
 const API_URL = "https://localhost:7158/api/Exam"
 const UPLOAD_API_URL = "https://localhost:7158/api/ExamUpload";

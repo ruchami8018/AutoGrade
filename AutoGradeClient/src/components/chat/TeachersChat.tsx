@@ -248,7 +248,7 @@ import {
 import SendIcon from '@mui/icons-material/Send';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import axios from 'axios';
-import { UserContext } from '../../store/UserStore';
+import { UserContext } from '../../store_NOT_IN_USE/UserStore';
 
 interface Message {
   sender: string;

@@ -1,21 +1,19 @@
 import { useContext, useEffect, useState } from 'react';
 import { Container, Button, Typography, Box, Card, CardContent, CardActions, IconButton, Tooltip } from '@mui/material';
-import { UserContext } from '../../store/UserStore';
+import { UserContext } from '../../store_NOT_IN_USE/UserStore';
 // import { ExamsContext } from '../../store/ExamsStore';
 import { useNavigate } from 'react-router-dom';
-import { Exam } from '../../models/Exam';
+import { Exam } from '../../models/Exam_NOT_IN_USE';
 import DeleteExam from './DeleteExam';
-import { fetchExamsByUser } from '../../services/examService';
+import { fetchExamsByUser } from '../../services/examService_NU';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadIcon from '@mui/icons-material/Download';
-
 
 const ExamsDashboard = () => {
   const navigate = useNavigate();
   const { currentUser } = useContext(UserContext);
   // const { state, dispatch } = useContext(ExamsContext);
   const [examToDelete, setExamToDelete] = useState<number | null>(null);
-
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
   const [exams, setExams] = useState<Exam[]>([]);
@@ -58,7 +56,6 @@ const ExamsDashboard = () => {
     
     return extensionMap[contentType] || 'pdf'; // ברירת מחדל היא pdf אם הסוג לא מוכר
   };
-
   // useEffect(() => {
   //   const fetchExams = async () => {
   //     try {
@@ -93,78 +90,6 @@ const ExamsDashboard = () => {
     };
     loadExams();
     }, [currentUser.id]);
-  // return (
-  //   <Container maxWidth="lg">
-  //     <Box sx={{ mt: 4, mb: 4 }}>
-  //       <Typography variant="h4" component="h1" gutterBottom>
-  //         המבחנים שלי
-  //       </Typography>
-  //       <Button 
-  //         variant="contained" 
-  //         color="primary" 
-  //         onClick={() => navigate('/add-exam')}
-  //         sx={{ mb: 2 }}
-  //       >
-  //         הוסף מבחן חדש
-  //       </Button>
-
-  //       {state.loading ? (
-  //         <Typography>טוען מבחנים...</Typography>
-  //       ) : state.error ? (
-  //         <Typography color="error">{state.error}</Typography>
-  //       ) : (
-  //         <Box sx={{ 
-  //           display: 'grid',
-  //           gridTemplateColumns: {
-  //             xs: '1fr',
-  //             sm: 'repeat(2, 1fr)',
-  //             md: 'repeat(3, 1fr)'
-  //           },
-  //           gap: 3
-  //         }}>
-  //           {state.exams.map((exam: Exam) => (
-  //             <Card key={exam.id}>
-  //               <CardContent>
-  //                 <Typography variant="h6" component="h2">
-  //                   {exam.title}
-  //                 </Typography>
-  //                 <Typography color="textSecondary">
-  //                   נושא: {exam.subject}
-  //                 </Typography>
-  //                 <Typography color="textSecondary">
-  //                   תאריך יצירה: {new Date(exam.createdAt).toLocaleDateString('he-IL')}
-  //                 </Typography>
-  //               </CardContent>
-  //               <CardActions>
-  //                 <Button 
-  //                   size="small" 
-  //                   onClick={() => navigate(`/exam/${exam.id}/update`)}
-  //                 >
-  //                   ערוך
-  //                 </Button>
-  //                 <Button 
-  //                   size="small" 
-  //                   color="error"
-  //                   onClick={() => setExamToDelete(exam.id)}
-  //                 >
-  //                   מחק
-  //                 </Button>
-  //               </CardActions>
-  //             </Card>
-  //           ))}
-  //         </Box>
-  //       )}
-  //     </Box>
-
-  //     {examToDelete !== null && (
-  //       <DeleteExam 
-  //         examId={examToDelete} 
-  //         open={true} 
-  //         onClose={() => setExamToDelete(null)} 
-  //       />
-  //     )}
-  //   </Container>
-  // );
 
   return (
     <Container maxWidth="lg">
@@ -180,7 +105,6 @@ const ExamsDashboard = () => {
         >
           הוסף מבחן חדש
         </Button>
-  
         {loading ? (
           <Typography>טוען מבחנים...</Typography>
         ) : error ? (
@@ -223,7 +147,6 @@ const ExamsDashboard = () => {
                     >
                       מחק
                     </Button>
-                    
                     {/* כפתור עין לצפייה בקובץ */}
                     <Tooltip title="צפה בקובץ המבחן">
                       <IconButton 
@@ -235,7 +158,6 @@ const ExamsDashboard = () => {
                         <VisibilityIcon />
                       </IconButton>
                     </Tooltip>
-                    
                     {/* כפתור הורדה */}
                     <Tooltip title="הורד את קובץ המבחן">
                       <IconButton 
@@ -256,7 +178,6 @@ const ExamsDashboard = () => {
           )
         )}
       </Box>
-  
       {examToDelete !== null && (
         <DeleteExam 
           examId={examToDelete} 
@@ -266,99 +187,5 @@ const ExamsDashboard = () => {
       )}
     </Container>
   );
-  
-
 };
-
 export default ExamsDashboard;
-
-
-
-
-// =======================FROM GEMINY========
-
-// import React, { useState, useEffect, useContext } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
-// import { UserContext } from '../../store/UserStore';
-// import { ExamsContext } from '../../store/ExamsStore';
-// import { fetchExamsByUser } from '../../services/examService'; // ייבוא הפונקציה משירות המבחנים
-// import DeleteExam from './DeleteExam';
-
-// const ExamsDashboard = () => {
-//     const { currentUser } = useContext(UserContext);
-//     const { state, dispatch } = useContext(ExamsContext);
-//     const navigate = useNavigate();
-//     const [deleteExamId, setDeleteExamId] = useState<number | null>(null);
-
-//     useEffect(() => {
-//         const loadExams = async () => {
-//             if (currentUser.id) {
-//                 dispatch({ type: 'FETCH_EXAMS_START' });
-//                 try {
-//                     const exams = await fetchExamsByUser(currentUser.id);
-//                     dispatch({ type: 'FETCH_EXAMS_SUCCESS', payload: exams });
-//                 } catch (error) {
-//                     dispatch({ type: 'FETCH_EXAMS_ERROR', payload: 'שגיאה בטעינת המבחנים.' });
-//                     console.error('שגיאה בטעינת המבחנים:', error);
-//                 }
-//             }
-//         };
-
-//         loadExams();
-//     }, [currentUser.id, dispatch]);
-
-//     const handleAddExam = () => {
-//         navigate('/add-exam');
-//     };
-
-//     const handleUpdateExam = (examId: number) => {
-//         navigate(`/update-exam/${examId}`);
-//     };
-
-//     const handleUploadExam = (examId: number) => {
-//         navigate(`/upload-student-exam/${examId}`);
-//     };
-
-//     const openDeleteModal = (examId: number) => {
-//         setDeleteExamId(examId);
-//     };
-
-//     const closeDeleteModal = () => {
-//         setDeleteExamId(null);
-//     };
-
-//     if (state.loading) {
-//         return <div>טוען מבחנים...</div>;
-//     }
-
-//     if (state.error) {
-//         return <div>שגיאה: {state.error}</div>;
-//     }
-
-//     return (
-//         <div>
-//             <h2>רשימת המבחנים שלי</h2>
-//             <button onClick={handleAddExam}>הוסף מבחן חדש</button>
-//             {state.exams.isEmpty() ? (
-//                 <p>אין מבחנים כרגע.</p>
-//             ) : (
-//                 <ul>
-//                     {state.exams.map(exam => (
-//                         <li key={exam.id}>
-//                             {exam.title} ({exam.subject})
-//                             <button onClick={() => handleUpdateExam(exam.id)}>עדכן</button>
-//                             <button onClick={() => handleUploadExam(exam.id)}>העלה פתרונות</button>
-//                             <button onClick={() => openDeleteModal(exam.id)}>מחק</button>
-//                         </li>
-//                     ))}
-//                 </ul>
-//             )}
-
-//             {deleteExamId !== null && (
-//                 <DeleteExam examId={deleteExamId} onClose={closeDeleteModal} />
-//             )}
-//         </div>
-//     );
-// };
-
-// export default ExamsDashboard;

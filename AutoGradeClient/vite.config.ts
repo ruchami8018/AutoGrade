@@ -17,27 +17,6 @@ export default defineConfig({
   },
 })
 
-// export default defineConfig({
-//   plugins: [react()],
-//   resolve: {
-//     alias: {
-//       '@': path.resolve(__dirname, 'src'),
-//     },
-//   },
-//   build: {
-//     chunkSizeWarningLimit: 1000, // מעלה את הסף ל-1000KB במקום 500KB ברירת מחדל
-//   },
-// })
-
-
-
-
-
-
-
-
-
-
 
 // import { defineConfig } from 'vite'
 // import react from '@vitejs/plugin-react'
