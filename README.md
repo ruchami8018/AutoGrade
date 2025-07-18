@@ -40,19 +40,19 @@ The system includes modern UI, AI-powered tools, cloud file storage, smart stati
 ### 🤖 AI & Communication
 - **AI Tools** – GPT/Custom models for content analysis, OCR, question generation.
 - **Authentication** – ASP.NET Identity + Google OAuth.
-- **Email** – SendGrid/SMTP for automated notifications.
-- **Real-Time Chat** – SignalR or WebSocket.
+<!-- - **Email** – SendGrid/SMTP for automated notifications. -->
+- **Real-Time Chat** – SignalR.
 
 ---
 
-## 📁 Core Concept: Files
+<!-- ## 📁 Core Concept: Files
 
 Every core action revolves around **educational files** such as tests, lesson plans, presentations, quizzes, and more.
 
 Each file includes:
 - Title, tags, description, creation date, physical file.
 - AI Analysis (e.g. generate questions, summaries).
-- Folder association, sharing, and metadata.
+- Folder association, sharing, and metadata. -->
 
 Advanced Options:
 - AI question generation
@@ -64,7 +64,7 @@ Advanced Options:
 ## 🖥️ React App – Teacher Interface
 
 - Login/Signup (Email+Password or Google OAuth)
-- Password reset via email
+<!-- - Password reset via email -->
 - Dashboard: view, search, filter, and tag files
 - Upload/edit/delete files
 - AI Actions: summarize, generate questions, find similar content
@@ -83,7 +83,7 @@ Advanced Options:
 - Secure login for admins (no Google OAuth)
 - User management: create, update, delete
 - Filter users by role/status
-- Send auto-generated credentials via email
+<!-- - Send auto-generated credentials via email -->
 - Action logs
 - General system usage reports
 
@@ -94,7 +94,7 @@ Advanced Options:
 - Full RESTful API
 - Entity Framework integration with MySQL
 - AI Service: OCR, question generation, tag prediction
-- Email service (registration, password reset, etc.)
+<!-- - Email service (registration, password reset, etc.) -->
 - Secure role-based access via JWT
 
 ---
