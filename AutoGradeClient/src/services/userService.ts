@@ -44,5 +44,5 @@ export const LoginWithGoogle = async (idToken: string) => {
     } catch (error) {
       console.error("שגיאה בהתחברות עם גוגל", error);
       throw error; // כדאי לזרוק שוב כדי שהקומפוננטה תדע על השגיאה
-    }
+    };
   };

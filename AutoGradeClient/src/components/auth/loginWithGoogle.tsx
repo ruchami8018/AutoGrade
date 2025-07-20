@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 // import { auth, provider } from "@/firebase"; // הנתיב לקובץ שלך!
 import { UserContext } from "@/context/UserReducer";
-// import { LoginWithGoogle } from "@/services/userService";
+import { LoginWithGoogle } from "@/services/userService";
 
-const LoginWithGoogle: React.FC = () => {
+const loginWithGoogle: React.FC = () => {
   const navigate = useNavigate();
   const { userDispatch } = useContext(UserContext);
 
@@ -41,4 +41,4 @@ const LoginWithGoogle: React.FC = () => {
   );
 };
 
-export default LoginWithGoogle;
+export default loginWithGoogle;
