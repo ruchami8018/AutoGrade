@@ -1,4 +1,5 @@
 # AUTO GRADE – All-in-One Teaching Assistant Platform
+🌐 [Visit the Live App](https://autograde-w7cl.onrender.com)
 
 **AUTO GRADE** is a smart SaaS platform built specifically for teachers, lecturers, and professional instructors.  
 It offers an all-in-one teaching management solution focused on organizing educational materials, collaborating with colleagues, and using AI tools to enhance productivity and teaching quality.
@@ -8,7 +9,9 @@ It offers an all-in-one teaching management solution focused on organizing educa
 ## 📌 General Overview
 
 AUTO GRADE enables teachers to manage files, create educational content, analyze materials with AI, communicate with fellow educators, and more — all under one roof.  
-The system includes modern UI, AI-powered tools, cloud file storage, smart statistics, automatic email delivery, and built-in real-time chat.
+The system includes modern UI, AI-powered tools, cloud file storage, smart statistics, 
+<!-- automatic email delivery, -->
+ and built-in real-time chat.
 
 ---
 

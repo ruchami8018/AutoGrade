@@ -2,7 +2,7 @@ import { FormEvent, useContext, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../../context/UserReducer";
 import { login } from "../../services/userService";
-// import LoginWithGoogle from "./loginWithGoogle";
+import LoginWithGoogle from "./LoginWithGoogle";
 import LoadingButton from "../ui/LoadingButton";
 
 const Login = () => {
@@ -79,7 +79,7 @@ const Login = () => {
         </p>
 
         <div className="mt-6">
-          {/* <LoginWithGoogle /> */}
+          <LoginWithGoogle />
         </div>
       </div>
     </div>
