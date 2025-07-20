@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 // import { auth, provider } from "@/firebase"; // הנתיב לקובץ שלך!
 import { UserContext } from "@/context/UserReducer";
-import { loginWithGoogle } from "@/services/userService";
+// import { LoginWithGoogle } from "@/services/userService";
 
 const LoginWithGoogle: React.FC = () => {
   const navigate = useNavigate();
