@@ -34,7 +34,7 @@ export const register = async (name : string, email : string,
     }
 }
 
-export const loginWithGoogle = async (idToken: string) => {
+export const LoginWithGoogle = async (idToken: string) => {
     try {
       const response = await axios.post(API_URL + "/google", {
         idToken,
