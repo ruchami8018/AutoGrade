@@ -8,7 +8,7 @@ import { FileText, FileIcon } from 'lucide-react';
 import { UserContext } from "@/context/UserReducer";
 import { Textarea } from "@/components/ui/textarea"; 
 import { SelectChangeEvent } from "@mui/material";
-import FileTypeSelect from "./fileTypeSelect";
+import FileTypeSelect from "./FileTypeSelect";
 import { File as FileModel } from "../../models/File"; 
 import LoadingButton from "@/components/ui/LoadingButton";
 

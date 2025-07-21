@@ -8,9 +8,9 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem,  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import { UserContext } from "../context/UserReducer";
-import AddFile from "../components/files/addFile";
+import AddFile from "../components/files/AddFile";
 import { File } from '../models/File'; 
-import FilesList from '@/components/files/filesList';
+import FilesList from '@/components/files/FilesList';
 
   type FileTabType = 'all' | File['type'];
 
@@ -68,15 +68,15 @@ export default function Files() {
               </DialogDescription>
             </DialogHeader>
             <AddFile
-              onFileAdded={(fileDto) => {
+              onFileAdded={(file) => {
                 const newFile: File = {
-                  id: fileDto.id,
-                  title: fileDto.title,
-                  type: fileDto.type,
+                  id: file.id,
+                  title: file.title,
+                  type: file.type,
                   date: new Date(), 
                   size: 0.1,
-                  tags: fileDto.tags,
-                  filePath: fileDto.filePath,
+                  tags: file.tags,
+                  filePath: file.filePath,
                 };
                 handleFileAdded(newFile); 
               }}

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { User } from '@/models/User';
+import { File } from '@/models/File';
 import { UserContext } from "../context/UserReducer";
 //import { InvokeLLM } from '@/integrations/Core';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -9,12 +10,19 @@ import { Badge } from "@/components/ui/badge";
 import KPICard from '../components/reports/KPICard';
 //import { createPageUrl } from '@/utils';
 import { FileText, Upload,  Share2,  Download, Users, Clock, BookOpen, PenTool, Calendar, BarChart2, ChevronRight, Lightbulb} from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import { Plus } from 'lucide-react';
+import AddFile from '@/components/files/AddFile';
 
 function Dashboard() {
   const { user } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(true);
   const [todayTips, setTodayTips] = useState<string[]>([]);
   const [activeTab, setActiveTab] = useState('activity');
+
+  const [files, setFiles] = useState<File[]>([]);
+  const [isAddFileDialogOpen, setIsAddFileDialogOpen] = useState(false); 
+  
 
   useEffect(() => {
     const loadUserAndData = async () => {
@@ -96,29 +104,48 @@ function Dashboard() {
     'meeting': 'bg-blue-100 text-blue-800 border-blue-200',
     'deadline': 'bg-amber-100 text-amber-800 border-amber-200'
   };
+    const handleFileAdded = (newFile: File) => {
+      setFiles((prevFiles) => [newFile, ...prevFiles]);
+      setIsAddFileDialogOpen(false);
+    };
 
   return (
     
     <div className="fade-in space-y-6">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            שלום, 
-            {' '} 
-            {user.name  || 'משתמש יקר'} 
-            !
-          </h1>
-          <p className="text-gray-500 mt-1">הנה סיכום הפעילות שלך</p>
-        </div>
-        <Button
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 shadow-md"
-          onClick={() => console.log("")
-            //window.location.href = createPageUrl("Files")
-            }
-        >
-          <Upload className="ml-2 h-4 w-4" />
-          העלאת קובץ חדש
-        </Button>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">הקבצים שלי</h1>
+
+        <Dialog open={isAddFileDialogOpen} onOpenChange={setIsAddFileDialogOpen}>
+          <DialogTrigger asChild>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90">
+              <Plus className="ml-2 h-5 w-5" />
+              העלאת קובץ חדש
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>העלאת קובץ חדש</DialogTitle>
+              <DialogDescription>
+                מלא את הפרטים והעלה את הקובץ שלך.
+              </DialogDescription>
+            </DialogHeader>
+            <AddFile
+              onFileAdded={(file  ) => {
+                const newFile: File = {
+                  id: file.id,
+                  title: file.title,
+                  type: file.type,
+                  date: new Date(), 
+                  size: 0.1,
+                  tags: file.tags,
+                  filePath: file.filePath,
+                };
+                handleFileAdded(newFile); 
+              }}
+              onClose={() => setIsAddFileDialogOpen(false)}
+            />
+          </DialogContent>
+        </Dialog>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
